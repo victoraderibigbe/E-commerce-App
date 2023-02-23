@@ -1,0 +1,11 @@
+.sign button {
+    padding-left: 0;
+}
+.cart button {
+    padding-left: 0;
+}
+@media (max-width: 688px) {
+    .find {
+        width: 60vw !important;
+    }
+}
