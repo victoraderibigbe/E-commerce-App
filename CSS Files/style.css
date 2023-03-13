@@ -4,8 +4,47 @@
 .cart button {
     padding-left: 0;
 }
+.carousel {
+    height: 65vh !important;
+}
+.carousel .carousel-inner .carousel-item .hero {
+    background-image: url(../Images/shopping-cart-filled-with-coins-copy-space-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-pic {
+    height: 70vh;
+}
+/* .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text {
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+} */
+.carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-text h1 {
+    font-size: 40px !important;
+}
 @media (max-width: 688px) {
     .find {
         width: 60vw !important;
+    }
+    .carousel {
+        height: 25vh !important;
+    }
+    .carousel .carousel-inner .carousel-item .hero {
+        height: 25vh !important;
+    }
+    .carousel .carousel-inner .carousel-item .hero .row .hero-div .hero-pic {
+        height: 20vh !important;
+    }
+    .carousel .carousel-inner .carousel-item .hero .row .hero-div .hero-pic img {
+        width: 200px !important;
+    }
+    .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text {
+        padding: none !important;
+        width: 40vw !important;
+        margin-top: 20px !important;
+    }
+    .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text h1 {
+        font-size: 20px !important;
     }
 }
