@@ -13,7 +13,7 @@
         <!-- -------- Navbar -------- -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 shadow sticky-top">
             <div class="container-fluid">
-            <a class="navbar-brand text-primary fs-1 fw-bold ms-5 me-5" href="#">iBuy<i class="bi bi-cart4"></i></a>
+            <a class="navbar-brand fs-1 fw-bold ms-5 me-5" href="#">iBuy<i class="bi bi-cart4"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,7 +47,7 @@
                 </ul>
                 <form class="d-flex w-50 me-5 find" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Search</button>
+                <button class="btn search-btn" type="submit">Search</button>
                 </form>
             </div>
             </div>
@@ -87,73 +87,174 @@
             </div>
 
             <!-- -------- Hero Section -------- -->
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <section class="hero-section p-3">
+                <div class="row">
+                    <div class="d-none d-md-block col-2">
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <img src="https://media0.giphy.com/media/d8Emd2WnaJR2HoiHQy/200w.webp?cid=ecf05e47xn0zj8n2a1nas0jeei32be3ux43mu6m7u30gfxlb&rid=200w.webp&ct=g" class="w-100 m-auto rounded mb-2" alt="">
+                            </div>
+                            <div class="col-12">
+                                <img src="https://media2.giphy.com/media/3oxHQiPpJvMtRrImvS/200w.webp?cid=ecf05e478xh4ek67h04rj5ja7so9u9i1rsnovklfw6je7woq&rid=200w.webp&ct=g" class="w-100 m-auto rounded mb-2" alt="">
+                            </div>
+                            <div class="col-12">
+                                <img src="https://media3.giphy.com/media/QW534qz1UEL6qKfv0r/200w.webp?cid=ecf05e47xn0zj8n2a1nas0jeei32be3ux43mu6m7u30gfxlb&rid=200w.webp&ct=g" class="w-100 m-auto rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <section class="hero">
+                                    <div class="row">
+                                        <div class="col-6 hero-div">
+                                            <div class="hero-pic">
+                                                <img src="../Images/Pic 1-removebg-preview.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 hero-text-div">
+                                            <div class="hero-text">
+                                                <h1 class="text-primary">Shop like a pro, save like a champ - with iBuy shopping app at your fingertips!</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                              </div>
+                              <div class="carousel-item">
+                                <section class="hero">
+                                    <div class="row">
+                                        <div class="col-6 hero-div">
+                                            <div class="hero-pic">
+                                                <img src="../Images/Pic_2-removebg-preview.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 hero-text-div">
+                                            <div class="hero-text">
+                                                <h1 class="text-primary">Shop smarter, not harder! Discover the ultimate online shopping experience with iBuy!</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                              </div>
+                              <div class="carousel-item">
+                                <section class="hero">
+                                    <div class="row">
+                                        <div class="col-6 hero-div">
+                                            <div class="hero-pic">
+                                                <img src="../Images/Pic_3-removebg-preview.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 hero-text-div">
+                                            <div class="hero-text">
+                                                <h1 class="text-primary">Unleash the power of online shopping with iBuy, try it now!</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block col-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="https://media4.giphy.com/media/bFYAZHHw5VXL9gOMlg/200w.webp?cid=ecf05e47yyg6trs2l5z1qufhphr2ei4ddijs8u3pc9popw07&rid=200w.webp&ct=g" class="w-100 m-auto rounded mb-2" alt="">
+                            </div>
+                            <div class="col-12">
+                                <img src="https://media4.giphy.com/media/3o6ZsYYi4MmCcr9KN2/200w.webp?cid=ecf05e47u8t3mta0fl2ksmkemon589alfnhzruorkas58r6s&rid=200w.webp&ct=g" class="w-100 m-auto rounded mb-2" alt="">
+                            </div>
+                            <div class="col-12">
+                                <img src="https://media3.giphy.com/media/veCY1SBYNKpPlOoxXp/200w.webp?cid=ecf05e47x2pbfk21wmedcq3phlq4gr0ft1qpdosq0bangllr&rid=200w.webp&ct=g" class="w-100 m-auto rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <section class="hero">
-                        <div class="row">
-                            <div class="col-6 hero-div">
-                                <div class="hero-pic">
-                                    <img src="../Images/Pic 1-removebg-preview.png" alt="">
+            </section>
+
+            <!-- -------- Stock Section -------- -->
+            <section class="stock-section">
+                <nav class="section-nav">
+                    <a href="#" class="text-decoration-none">
+                        <h2>Limited Stock Deals</h2>
+                    </a>
+                </nav>
+                <div class="row">
+                    <div class="col-6 col-md-2 stock-box me-5 ms-3">
+                        <a href="#">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/5744801/1.jpg?5325" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">Oraimo 10000 Mah Power-Bank Dual Fast Charging</p>
+                                  <h3>₦10,000</h3>
                                 </div>
                             </div>
-                            <div class="col-6 hero-text-div">
-                                <div class="hero-text">
-                                    <h1 class="text-primary">Shop like a pro, save like a champ - with iBuy shopping app at your fingertips!</h1>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2 stock-box me-5">
+                        <a href="#">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/06/7283311/1.jpg?0878" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">Oraimo OPB-P118D 10000 Mah Power-Bank Dual Fast Charging</p>
+                                  <h3>₦10,010</h3>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                  </div>
-                  <div class="carousel-item">
-                    <section class="hero">
-                        <div class="row">
-                            <div class="col-6 hero-div">
-                                <div class="hero-pic">
-                                    <img src="../Images/Pic_2-removebg-preview.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2 stock-box me-5">
+                        <a href="#">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/3011461/1.jpg?0815" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">itel 32" Inches A3250 DLED HD TV Overvoltage Protection</p>
+                                  <h3>₦ 58,427</h3>
                                 </div>
                             </div>
-                            <div class="col-6 hero-text-div">
-                                <div class="hero-text">
-                                    <h1 class="text-primary">Shop smarter, not harder! Discover the ultimate online shopping experience with iBuy!</h1>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2 stock-box me-5">
+                        <a href="#">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/88/7704791/1.jpg?5515" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">T500 Smart Watch Wireless Bluetooth Fitness Strap Black</p>
+                                  <h3>₦ 5,500</h3>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                  </div>
-                  <div class="carousel-item">
-                    <section class="hero">
-                        <div class="row">
-                            <div class="col-6 hero-div">
-                                <div class="hero-pic">
-                                    <img src="../Images/Pic_3-removebg-preview.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-2 stock-box">
+                        <a href="#">
+                            <div class="card shadow" style="width: 18rem;">
+                                <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/05/130148/1.jpg?0854" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text">Bluetooth Headset + Smart Watch Waterproof Sports Combination Affordable Set</p>
+                                  <h3>₦ 8,640</h3>
                                 </div>
                             </div>
-                            <div class="col-6 hero-text-div">
-                                <div class="hero-text">
-                                    <h1 class="text-primary">Unleash the power of online shopping with iBuy, try it now!</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                  </div>
+                        </a>
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+            </section>
 
         <!-- --------- Script Files --------- -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <script src="../Script/script.js"></script>
     </body>
 </html>

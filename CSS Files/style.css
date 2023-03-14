@@ -1,3 +1,36 @@
+* {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+}
+body {
+    background: #f5f5f5;
+}
+::-webkit-scrollbar {
+width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #ffb643;
+}
+::-webkit-scrollbar-thumb {
+background: #000442;
+border-radius: 10px;
+}
+::selection {
+    background: #000442;
+    color: #ffb643;
+}
+.navbar .container-fluid .navbar-brand {
+    color: #000442 !important;
+}
+.navbar .container-fluid .collapse .search-btn {
+    background: #000442;
+    color: #ffb643;
+}
+.navbar .container-fluid .collapse .search-btn:hover {
+    background: #ffb643;
+    color: #000442;
+}
 .sign button {
     padding-left: 0;
 }
@@ -6,32 +39,42 @@
 }
 .carousel {
     height: 65vh !important;
+    margin: auto !important;
 }
 .carousel .carousel-inner .carousel-item .hero {
-    background-image: url(../Images/shopping-cart-filled-with-coins-copy-space-background.jpg);
+    background-image: url(https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?size=626&ext=jpg&uid=R88143231&ga=GA1.1.435754364.1664882235&semt=ais);
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 20px !important;
 }
 .carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-pic {
     height: 70vh;
 }
-/* .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text {
-    margin-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-} */
 .carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-text h1 {
     font-size: 40px !important;
+    color: #000442 !important;
+}
+.stock-section {
+    width: 90vw;
+    margin: auto;
+}
+.stock-section .section-nav h2{
+    background: #000442;
+    color: #ffb643;
+    padding: 20px;
+}
+.stock-section .row .stock-box a .card{
+    color: #000442;
 }
 @media (max-width: 688px) {
     .find {
         width: 60vw !important;
     }
     .carousel {
-        height: 25vh !important;
+        height: 20vh !important;
     }
     .carousel .carousel-inner .carousel-item .hero {
-        height: 25vh !important;
+        height: 20vh !important;
     }
     .carousel .carousel-inner .carousel-item .hero .row .hero-div .hero-pic {
         height: 20vh !important;
@@ -45,6 +88,15 @@
         margin-top: 20px !important;
     }
     .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text h1 {
-        font-size: 20px !important;
+        font-size: 1.2rem !important;
+    }
+    .stock-section .row .stock-box{
+        width: 10rem !important;
+        margin-left: 0 !important;
+    }
+    .stock-section .row .stock-box a .card{
+        width: 12rem !important;
+        height: 25rem !important;
+        margin: 10px !important;
     }
 }
