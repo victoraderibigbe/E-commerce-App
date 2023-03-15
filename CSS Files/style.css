@@ -63,9 +63,23 @@ border-radius: 10px;
     color: #ffb643;
     padding: 20px;
 }
+.stock-section .row .stock-box {
+    height: 30rem !important;
+}
 .stock-section .row .stock-box a .card{
     color: #000442;
+    height: 30rem !important;
 }
+.stock-section .row .stock-box a .card:hover{
+    position: absolute;
+    transform: scale(110%) !important;
+    transition: all 0.7s ease;
+}
+footer {
+    height: 80vh;
+    background: #000442;
+}
+
 @media (max-width: 688px) {
     .find {
         width: 60vw !important;
@@ -92,11 +106,10 @@ border-radius: 10px;
     }
     .stock-section .row .stock-box{
         width: 10rem !important;
-        margin-left: 0 !important;
+        height: 28rem !important;
     }
     .stock-section .row .stock-box a .card{
         width: 12rem !important;
         height: 25rem !important;
-        margin: 10px !important;
     }
 }
