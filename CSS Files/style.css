@@ -5,6 +5,7 @@
 }
 body {
     background: #f5f5f5;
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar {
 width: 10px;
@@ -37,18 +38,41 @@ border-radius: 10px;
 .cart button {
     padding-left: 0;
 }
+.hero-section .row .categories .row .col-12 a {
+    color: #000442 !important;
+    font-weight: bold;
+    transition: all 0.1s ease;
+}
+.hero-section .row .categories .row .col-12 a:hover {
+    color: #ffb643 !important;
+    font-weight: bold;
+}
 .carousel {
-    height: 65vh !important;
+    height: 55vh !important;
     margin: auto !important;
 }
 .carousel .carousel-inner .carousel-item .hero {
-    background-image: url(https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?size=626&ext=jpg&uid=R88143231&ga=GA1.1.435754364.1664882235&semt=ais);
+    background-image: url(https://img.freepik.com/free-photo/abstract-orange-background-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color_1258-69033.jpg?size=626&ext=jpg&uid=R88143231&ga=GA1.1.435754364.1664882235&semt=ais);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px !important;
+    height: 55vh !important;
 }
 .carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-pic {
-    height: 70vh;
+    margin: auto !important;
+    margin-top: 30px !important;
+    height: 60% !important;
+    width: 80% !important;
+}
+.carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-pic img {
+    height: 100% !important;
+}
+.carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-text {
+    margin: auto !important;
+    margin-top: 30px !important;
+    padding: none !important;
+    height: 60% !important;
+    width: 100% !important;
 }
 .carousel .carousel-inner .carousel-item .hero .row .col-6 .hero-text h1 {
     font-size: 40px !important;
@@ -71,13 +95,55 @@ border-radius: 10px;
     height: 30rem !important;
 }
 .stock-section .row .stock-box a .card:hover{
-    position: absolute;
     transform: scale(110%) !important;
     transition: all 0.7s ease;
 }
 footer {
-    height: 80vh;
+    height: 35vh;
     background: #000442;
+}
+footer .row .footer-info {
+    border-bottom: 1px solid #ffb643 !important;
+}
+footer .row .col-12 .row .col-12 h1 {
+    color: #ffb643;
+    font-size: 3rem !important;
+    display: inline !important;
+}
+footer .row .col-12 .row .col-12 i {
+    color: #ffb643;
+    font-size: 3rem !important;
+    display: inline !important;
+}
+footer .row .col-12 .row .col-12 p {
+    color: #ffb643;
+    font-size: 1rem !important;
+}
+footer .row .col-12 .row .col-12 input {
+    border: 1px solid #ffb643 !important;
+    color: #ffb643;
+    background: none;
+}
+footer .row .col-12 .row .col-12 input::placeholder {
+    color: #ffb643;
+}
+footer .row .col-12 .row .col-12 .btn {
+    border:1px solid #ffb643 !important;
+    color: #ffb643;
+}
+footer .row .col-12 .row .col-12 .btn:hover {
+    background: #ffb643;
+    color: #000442;
+}
+footer .row .col-12 .row .col-12 .row .col-3 a i {
+    font-size: 1.5rem !important;
+}
+footer .row .col-12 .row .col-12 .row .col-3 a i:hover {
+    color: #f5f5f5;
+    transition: all 0.3s ease;
+}
+footer .row .col-12 .footer-copyright {
+    color: #ffb643;
 }
 
 @media (max-width: 688px) {
@@ -91,15 +157,19 @@ footer {
         height: 20vh !important;
     }
     .carousel .carousel-inner .carousel-item .hero .row .hero-div .hero-pic {
-        height: 20vh !important;
+        margin: auto !important;
+        margin-top: 10px !important;
+        height: 80% !important;
+        width: 80% !important;
     }
     .carousel .carousel-inner .carousel-item .hero .row .hero-div .hero-pic img {
-        width: 200px !important;
+        width: 100% !important;
+        height: 100% !important;
     }
     .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text {
-        padding: none !important;
-        width: 40vw !important;
-        margin-top: 20px !important;
+        margin-top: 10px !important;
+        height: 80% !important;
+        width: 80% !important;
     }
     .carousel .carousel-inner .carousel-item .hero .row .hero-text-div .hero-text h1 {
         font-size: 1.2rem !important;
@@ -111,5 +181,11 @@ footer {
     .stock-section .row .stock-box a .card{
         width: 12rem !important;
         height: 25rem !important;
+    }
+    footer {
+        height: 60vh;
+    }
+    footer .row .col-12 .footer-copyright {
+        width: 70% !important;
     }
 }
