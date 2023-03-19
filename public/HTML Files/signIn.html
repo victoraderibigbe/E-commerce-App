@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../CSS Files/style.css">
+        <title>E-commerce</title>
+    </head>
+
+    <body>
+        <!-- -------- Navbar -------- -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary px-0 px-md-5 shadow sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-1 fw-bold ms-0 ms-md-5 me-5" href="#">iBuy<i class="bi bi-cart4"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-5 fw-bold" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-5">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-5 sign">
+                            <a href="./signIn.html" class="nav-link">Sign In</a>
+                        </li>
+                        <li class="nav-item me-5 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Help
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                                <li><a class="dropdown-item" href="#">Place Order</a></li>
+                                <li><a class="dropdown-item" href="#">Order Cancellation</a></li>
+                                <li><a class="dropdown-item" href="#">Returns and Refunds</a></li>
+                                <li><a class="dropdown-item" href="#">Payment</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item cart">
+                            <a class="nav-link" href="cart.html">
+                                Cart<i class="bi bi-cart-check"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex w-50 me-5 find" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn search-btn" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- -------- Sign In/Sign Up -------- -->
+        <div class="container w-50 p-3 p-md-5 mt-5 mb-5 bg-light shadow text-center auth">
+            <div class="mb-3">
+                <label for="" class="form-label float-start">Email</label>
+                <input type="text" class="form-control" placeholder="Enter Email..." id="email">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label float-start">Password</label>
+                <input type="password" class="form-control" placeholder="Enter Password..." id="password">
+            </div>
+            <button class="btn w-100 fw-bold sign-in-btn" id="signInBtn">Sign In</button>
+            <button class="btn w-100 mt-3 fw-bold google-btn" id="signInWithGoogle">Sign In with Google</button>
+        </div>
+
+        <!-- -------- Footer -------- -->
+        <footer class="footer">
+            <div class="row">
+                <div class="col-12 footer-info">
+                    <div class="row">
+                        <div class="d-none d-md-block col-12 col-md-4 text-center p-5">
+                            <h1>iBuy</h1><i class="bi bi-cart4"></i>
+                        </div>
+                        <div class="col-12 col-md-4 p-5 text-center">
+                            <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+                            <input type="email" class="form-control" placeholder="Enter your Email...">
+                            <button class="btn w-50 mt-3">Subscribe</button>
+                        </div>
+                        <div class="col-12 col-md-4 pt-0 pt-md-5 p-5 text-center">
+                            <div class="footer-icons w-50 mx-auto">
+                                <p>JOIN US ON</p>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="https://twitter.com/Vickiejohnn20"><i class="bi bi-twitter"></i></a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="https://www.linkedin.com/in/vee-jay"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="https://web.facebook.com/victorjohn.aderibigbe.7/"><i
+                                                class="bi bi-facebook"></i></a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="https://wa.me/+2349032317059"><i class="bi bi-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="footer-copyright w-25 mx-auto mt-3 text-center">
+                        &copy; copyright @ 2023 by <span>Victor Aderibigbe</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- --------- Script Files --------- -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+            import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyBpBXEavkwil9WsvLq8ilidjyHEOigBdDg",
+                authDomain: "ibuy-ca7a5.firebaseapp.com",
+                projectId: "ibuy-ca7a5",
+                storageBucket: "ibuy-ca7a5.appspot.com",
+                messagingSenderId: "551424000820",
+                appId: "1:551424000820:web:ee3b977b08211baa921b61"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const provider = new GoogleAuthProvider();
+            const auth = getAuth();
+
+            document.getElementById('signInWithGoogle').addEventListener('click', () => {
+                signInWithPopup(auth, provider)
+                    .then((result) => {
+                        const user = result.user
+                        console.log(user)
+                        window.location.href = 'cart.html'
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+            })
+        </script>
+    </body>
+
+</html>
