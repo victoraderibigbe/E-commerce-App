@@ -179,12 +179,21 @@ border-radius: 10px;
     color: #ffb643 !important;
 }
 
-/* Cart Page */
+/* Cart Checkout Page */
 .cart-box .title{
     color: #000442;
 }
+.cart-box a button{
+    background: #ffb643 !important;
+    color: #000442 !important;
+    transition: all 0.3s ease;
+}
+.cart-box a button:hover {
+    background: #ffb643 !important;
+    color: #000442 !important;
+}
 
-/* Add To Cart Page */
+/* Cart Page */
 .cart-quantity {
     margin: 0 10px;
 }
