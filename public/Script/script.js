@@ -1,30 +1,25 @@
-function updateCartButton() {
-  const button = document.getElementById('add-to-cart-btn');
-  button.innerHTML = 'Add/Remove from Cart';
-  
-  const quantity = document.createElement('span');
-  quantity.innerHTML = '0';
-  quantity.classList.add('cart-quantity');
-  
-  const plusButton = document.createElement('button');
-  plusButton.innerHTML = '+';
-  plusButton.classList.add('plus-button');
-  plusButton.addEventListener('click', () => {
-    quantity.innerHTML = parseInt(quantity.innerHTML) + 1;
-  });
-  
-  const minusButton = document.createElement('button');
-  minusButton.innerHTML = '-';
-  minusButton.classList.add('minus-button');
-  minusButton.addEventListener('click', () => {
-    quantity.innerHTML = parseInt(quantity.innerHTML) - 1;
-  });
-  
-  button.appendChild(quantity);
-  button.appendChild(plusButton);
-  button.appendChild(minusButton);
-}
+let cartBtn = document.getElementById('add-to-cart-btn');
+let cartBtnContainer = document.querySelector('.btn-container')
+let updateCart = document.querySelector('.update-cart')
+let quantity = document.querySelector('.item-unit')
+cartBtn.addEventListener('click', ()=> {
+  cartBtn.style.display = 'none'
+  updateCart.classList.remove('d-none')
+  quantity.innerText++
+})
 
-const addToCartButton = document.getElementById('add-to-cart-btn');
-addToCartButton.addEventListener('click', updateCartButton);
+addItem.addEventListener('click', ()=> {
+  if(quantity.innerText < 3) {
+    quantity.innerText++
+  }
+})
+
+removeItem.addEventListener('click', ()=> {
+  if(quantity.innerText > 0) {
+    quantity.innerText--
+  } if(quantity.innerText == 0) {
+    cartBtn.style.display = 'block'
+    updateCart.classList.add('d-none')
+  }
+})
 

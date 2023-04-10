@@ -54,7 +54,7 @@
         </nav>
 
             <!-- --------- Cart and Orders --------- -->
-            <div class="container w-50 mx-auto text-center shadow cart-box p-3 p-md-5 mt-5 mb-5 bg-light">
+            <div id="noOrder" class="container w-50 mx-auto text-center shadow cart-box p-3 p-md-5 mt-5 mb-5 bg-light">
                 <h1 class="title">Carts & Orders</h1>
                 <h3>Ooops... You currently have nothing in cart!</h3>
                 <a href="../index.html">
@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="col-12 p-2">
                                         <a href="#">
-                                            <button class="btn btn-warning w-100">CHECKOUT (₦ 6,500)</button>
+                                            <button class="btn btn-warning w-100" id="checkout">CHECKOUT (₦ 6,500)</button>
                                         </a>
                                     </div>
                                 </div>
@@ -192,7 +192,7 @@
         <!-- --------- Script Files --------- -->
         <script type="module">
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-            import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+            import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
             const firebaseConfig = {
             apiKey: "AIzaSyBpBXEavkwil9WsvLq8ilidjyHEOigBdDg",
@@ -205,35 +205,31 @@
 
             const app = initializeApp(firebaseConfig);
             const auth = getAuth();
-
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    console.log(user)
+            document.getElementById('checkout').addEventListener('click', ()=> {
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        console.log(user)
+                        window.location.href = 'checkout.html'
+                    } else {
+                        window.location.href = 'signIn.html'
+                    }
+                });
+                    
+                if (localStorage.userDetails) {
+                    if (localStorage.userIndex) {
+                        let allUsers = JSON.parse(localStorage.getItem('userDetails'))
+                        let userId = localStorage.getItem('userIndex')
+                        console.log(allUsers[userId]);
+                        window.location.href = 'checkout.html'
+                    }
+                    else {
+                        console.log('User not signed in');
+                        window.location.href = 'signIn.html'
+                    }
                 } else {
                     window.location.href = 'signIn.html'
                 }
-            });
-
-            if (localStorage.userDetails) {
-                let allUsers = JSON.parse(localStorage.getItem('userDetails'))
-                allUsers.map((each, index)=> {
-                    let email = each.Email
-                    let password = each.Password
-                    
-                    signInWithEmailAndPassword(auth, email, password)
-                    .then((userCredential) => {
-                        const user = userCredential.user;
-                        if (user) {
-                            console.log(user)
-                        } else {
-                            window.location.href = 'signIn.html'
-                        }
-                    })
-                    .catch((error) => {
-                        console.log(error)
-                    });
-                })
-            }
+            })
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>

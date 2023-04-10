@@ -126,7 +126,7 @@
     <!-- --------- Script Files --------- -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-        import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBpBXEavkwil9WsvLq8ilidjyHEOigBdDg",
@@ -140,9 +140,6 @@
         const app = initializeApp(firebaseConfig);
         const provider = new GoogleAuthProvider();
         const auth = getAuth();
-        const prevEmail = userEmail.value;
-        const email = prevEmail.toString();
-        const password = userPassword.value;
         let allUsers = []
 
         document.getElementById('signInBtn').addEventListener('click', ()=> {
@@ -153,27 +150,22 @@
                 }
                 allUsers.push(userLogin)
                 localStorage.setItem('userDetails', JSON.stringify(allUsers))
+                let userInfo = JSON.parse(localStorage.getItem('userDetails'))
+                userInfo.map((item, index)=> {
+                    localStorage.setItem('userIndex', index)
+                })
                 swal({
-                    title: "Successfull!",
+                    title: "Successful!",
                     text: "You're successfully signed in!",
                     icon: "success",
                     button: "OK",
                 });
-                // window.location.href = 'cart.html'
-
-                createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential)=> {
-                    const user = userCredential.user
-                    console.log(user)
-                    window.location.href = 'cart.html'
-                })
-                .catch((error)=> {
-                    console.log(error)
-                })
+                window.location.href = 'cart.html'
             }
 
         })
 
+        // Google Authentication
         document.getElementById('signInWithGoogle').addEventListener('click', () => {
             signInWithPopup(auth, provider)
                 .then((result) => {
