@@ -205,30 +205,31 @@
 
             const app = initializeApp(firebaseConfig);
             const auth = getAuth();
+
             document.getElementById('checkout').addEventListener('click', ()=> {
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
                         console.log(user)
                         window.location.href = 'checkout.html'
                     } else {
-                        window.location.href = 'signIn.html'
+                        if (localStorage.userDetails) {
+                            if (localStorage.userIndex) {
+                                let allUsers = JSON.parse(localStorage.getItem('userDetails'))
+                                let userId = localStorage.getItem('userIndex')
+                                console.log(allUsers[userId]);
+                                window.location.href = 'checkout.html'
+                            }
+                            else {
+                                console.log('User not signed in');
+                                window.location.href = 'signIn.html'
+                            }
+                        } else {
+                            window.location.href = 'signIn.html'
+                        }
                     }
                 });
-                    
-                if (localStorage.userDetails) {
-                    if (localStorage.userIndex) {
-                        let allUsers = JSON.parse(localStorage.getItem('userDetails'))
-                        let userId = localStorage.getItem('userIndex')
-                        console.log(allUsers[userId]);
-                        window.location.href = 'checkout.html'
-                    }
-                    else {
-                        console.log('User not signed in');
-                        window.location.href = 'signIn.html'
-                    }
-                } else {
-                    window.location.href = 'signIn.html'
-                }
+
+                        
             })
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
