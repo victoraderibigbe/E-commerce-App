@@ -3,7 +3,6 @@ let cartBtnContainer = document.querySelector('.btn-container')
 let updateCart = document.querySelector('.update-cart')
 let quantity = document.querySelector('.item-unit')
 let product = document.getElementById('product').src
-console.log(product);
 let description = document.getElementById('description').innerText
 let price = Number(document.getElementById('price').innerText)
 
@@ -36,11 +35,13 @@ cartBtn.addEventListener('click', ()=> {
   })
 })
 
+
+
 addItem.addEventListener('click', ()=> {
   if(quantity.innerText < 3) {
     quantity.innerText++
     let newUnit = quantity.innerText
-    console.log(newUnit);
+    console.log(newUnit); 
     let userProduct = Number(price * newUnit)
     console.log(userProduct);
     let goods = JSON.parse(localStorage.getItem('localproduct'))
@@ -65,5 +66,3 @@ removeItem.addEventListener('click', ()=> {
     updateCart.classList.add('d-none')
   }
 })
-
-console.log('Test');

@@ -63,52 +63,9 @@
             </div>
             <div id="orderBox" class="container order-box mx-auto shadow p-3 p-md-5 mb-5 mt-5">
                 <div class="row">
-                    <div class="col-12 col-md-8 p-3 p-md-5 bg-light">
-                        <div class="row">
-                            <div class="col-12">
-                                <nav class="w-100 cart-nav p-2 border-bottom">
-                                    <h3>Cart()</h3>
-                                </nav>
-                            </div>
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <img src="https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/20/385178/1.jpg?1671" class="w-100" alt="">
-                                            </div>
-                                            <div class="col-12">
-                                                <button class="btn btn-warning w-100"><i class="bi bi-trash"> Remove</i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <p>MOVEFAST 22.5W Super Fast Charging10000 MAH Power Banks</p>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h3>₦ 6,500</h3>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="row">
-                                                    <div class="col-4">
-                                                        <button class="btn btn-warning"><i class="bi bi-dash"></i></button>
-                                                    </div>
-                                                    <div class="col-4">1</div>
-                                                    <div class="col-4">
-                                                        <button class="btn btn-warning"><i class="bi bi-dash"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="dispInfo" class="col-12 col-md-8 p-3 p-md-5 bg-light"></div>
                     <div class="col-12 col-md-3 ms-4">
-                        <div class="row">
+                        <div class="row px-4">
                             <div class="col-12 mb-2 bg-light">
                                 <div class="row">
                                     <div class="col-12 p-2 border-bottom">
@@ -233,7 +190,61 @@
             })
         </script>
         <script>
-            document.getElementById('noOrder').classList.add('d-none')
+            let savedInfo = JSON.parse(localStorage.getItem('localproduct'))
+            console.log(savedInfo);
+            if(!savedInfo) {
+                document.getElementById('noOrder').classList.remove('d-none')
+                document.getElementById('orderBox').classList.add('d-none')
+            } else {
+                document.getElementById('noOrder').classList.add('d-none')
+                document.getElementById('orderBox').classList.remove('d-none')
+            }
+            savedInfo.map((each)=> {
+                dispInfo.innerHTML = `
+                <div class="row px-4">
+                    <div class="col-12">
+                        <nav class="w-100 cart-nav p-2 border-bottom">
+                            <h3>Cart()</h3>
+                        </nav>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="${each.customerProduct}" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-warning w-100"><i class="bi bi-trash"> Remove</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5 col-md-6">
+                                <p>${each.proDescription}</p>
+                            </div>
+                            <div class="col-4 col-md-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3>₦${each.productPrice}</h3>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <button class="btn btn-warning"><i class="bi bi-dash"></i></button>
+                                            </div>
+                                            <div class="col-4 text-center"><h5>${each.Unit}</h5></div>
+                                            <div class="col-4">
+                                                <button class="btn btn-warning"><i class="bi bi-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
+            })
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
