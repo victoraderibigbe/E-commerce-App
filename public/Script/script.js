@@ -6,6 +6,19 @@ let product = document.getElementById('product').src
 let description = document.getElementById('description').innerText
 let price = Number(document.getElementById('price').innerText)
 
+if(localStorage.localproduct) {
+  let detail = JSON.parse(localStorage.getItem('localproduct'))
+  detail.forEach((each)=> {
+    console.log(each.Unit);
+    quantity.innerText = each.Unit
+    cartBtn.style.display = 'none'
+    updateCart.classList.remove('d-none')
+  })
+} else {
+  cartBtn.style.display = 'block'
+  updateCart.classList.add('d-none')
+}
+
 let allProducts = []
 let allPrices = []
 let productInfo = {
@@ -15,8 +28,22 @@ let productInfo = {
   Unit: ''
 }
 cartBtn.addEventListener('click', ()=> {
-  allProducts.push(productInfo)
-  localStorage.setItem('localproduct', JSON.stringify(allProducts))
+  if(localStorage.localproduct) {
+    let customerPurchase = JSON.parse(localStorage.getItem('localproduct'))
+    customerPurchase.map((each)=> {
+      productInfo = {
+        Product: customerPurchase.Product,
+        Description: customerPurchase.Description,
+        Price: customerPurchase.Price,
+        Unit: customerPurchase.Unit
+      }
+      allProducts.push(customerPurchase)
+      localStorage.setItem('localproduct', JSON.stringify(allProducts))
+    })
+  } else {
+    allProducts.push(productInfo)
+    localStorage.setItem('localproduct', JSON.stringify(allProducts))
+  }
   cartBtn.style.display = 'none'
   updateCart.classList.remove('d-none')
   let unit = quantity.innerText++ 
@@ -44,8 +71,7 @@ addItem.addEventListener('click', ()=> {
     console.log(newUnit); 
     let userProduct = Number(price * newUnit)
     console.log(userProduct);
-    let goods = JSON.parse(localStorage.getItem('localproduct'))
-    goods.map((each)=> {
+    detail.map((each)=> {
       let newInfo = {
         customerProduct: each.Product,
         proDescription: each.Description,
@@ -55,12 +81,31 @@ addItem.addEventListener('click', ()=> {
       allProducts.splice(0, 1, newInfo)
       localStorage.setItem('localproduct', JSON.stringify(allProducts))
     })
+    // if(localStorage.localproduct) {
+    //   let goods = JSON.parse(localStorage.getItem('localproduct'))
+    // }
   }
 })
 
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
-    quantity.innerText--
+    let goodUnit = quantity.innerText--
+    console.log(goodUnit); 
+    let userGoods = Number(price * goodUnit)
+    console.log(userGoods);
+    getGoods.map((each)=> {
+      let goodsInfo = {
+        customerProduct: each.Product,
+        proDescription: each.Description,
+        productPrice: userGoods,
+        Unit: goodUnit
+      }
+      allProducts.splice(0, 1, goodsInfo)
+      localStorage.setItem('localproduct', JSON.stringify(allProducts))
+    })
+    // if(localStorage.localproduct) {
+    //   let getGoods = JSON.parse(localStorage.getItem('localproduct'))
+    // }
   } if(quantity.innerText == 0) {
     cartBtn.style.display = 'block'
     updateCart.classList.add('d-none')
