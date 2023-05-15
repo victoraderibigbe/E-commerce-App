@@ -80,6 +80,79 @@
         <button class="btn w-100 mt-3 fw-bold google-btn" id="signInWithGoogle">Sign In with Google</button>
     </div>
 
+    <!-- Displays account settings/details if signed in -->
+    <div class="container col-10 col-md-12 p-4 mt-5 mb-5 shadow">
+
+        <!-- For media screen -->
+        <button class="btn btn-primary mb-3 d-block d-md-none bi bi-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></button>
+        <div class="offcanvas offcanvas-start w-75" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title bi bi-person-fill" id="offcanvasWithBothOptionsLabel"> My Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row">
+                    <div class="col-12 border-bottom">
+                        <ul class="list-unstyled fs-3 lh-lg">
+                            <li class="bi bi-box2"> Orders</li>
+                            <li class="bi bi-envelope"> Inbox</li>
+                            <li class="bi bi-chat-right-quote"> Pending Reviews</li>
+                            <li class="bi bi-heart"> Saved Items</li>
+                            <li class="bi bi-clock-history"> Recently Viewed</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 border-bottom">
+                        <ul class="list-unstyled fs-3 lh-lg">
+                            <li>Account Management</li>
+                            <li>Address Book</li>
+                            <li>Newsletter Preferences</li>
+                            <li>Close Account</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn text-warning mt-3">LOGOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- For medium/large screen -->
+        <div class="row">
+            <div class="col-2 ms-5 d-none d-md-block px-3 bg-light">
+                <nav class="border-bottom text-center p-2 mb-3">
+                    <h4>My Account</h4>
+                </nav>
+                <div class="row">
+                    <div class="col-12 border-bottom">
+                        <ul class="list-unstyled lh-lg">
+                            <li class="bi bi-box2"> Orders</li>
+                            <li class="bi bi-envelope"> Inbox</li>
+                            <li class="bi bi-chat-right-quote"> Pending Reviews</li>
+                            <li class="bi bi-heart"> Saved Items</li>
+                            <li class="bi bi-clock-history"> Recently Viewed</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 border-bottom">
+                        <ul class="list-unstyled lh-lg">
+                            <li>Account Management</li>
+                            <li>Address Book</li>
+                            <li>Newsletter Preferences</li>
+                            <li>Close Account</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn text-warning mt-3">LOGOUT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-9 ms-0 ms-md-4 bg-light">
+                <nav class="border-bottom text-center p-2 mb-3">
+                    <h4 class="text-center">Account Overview</h4>
+                </nav>
+            </div>
+        </div>
+    </div>
+
     <!-- -------- Footer -------- -->
     <footer class="footer">
         <div class="row">
