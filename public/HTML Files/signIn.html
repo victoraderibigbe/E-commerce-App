@@ -48,8 +48,12 @@
                         </ul>
                     </li>
                     <li class="nav-item cart">
-                        <a class="nav-link" href="cart.html">
-                            Cart<i class="bi bi-cart-check"></i>
+                        <a href="./cart.html" class="nav-link">
+                            Cart<i class="bi bi-cart-check position-relative">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                </span>
+                            </i>
                         </a>
                     </li>
                 </ul>
@@ -62,7 +66,11 @@
     </nav>
 
     <!-- -------- Sign In/Sign Up -------- -->
-    <div class="container form-group w-50 p-3 p-md-5 mt-5 mb-5 bg-light shadow text-center auth">
+    <div class="container form-group login-form w-50 p-3 p-md-5 mt-5 mb-5 bg-light shadow text-center auth">
+        <div class="mb-3">
+            <label for="" class="form-label float-start">Username</label>
+            <input type="text" class="form-control" placeholder="Enter Username..." id="username" required>
+        </div>
         <div class="mb-3">
             <label for="" class="form-label float-start">Email</label>
             <input type="email" class="form-control" placeholder="Enter Email..." id="userEmail" required>
@@ -81,10 +89,9 @@
     </div>
 
     <!-- Displays account settings/details if signed in -->
-    <div class="container col-10 col-md-12 p-4 mt-5 mb-5 shadow">
+    <div class="container account-info d-none col-10 col-md-12 p-4 mt-5 mb-5 shadow">
 
         <!-- For media screen -->
-        <button class="btn btn-primary mb-3 d-block d-md-none bi bi-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></button>
         <div class="offcanvas offcanvas-start w-75" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header border-bottom">
                 <h5 class="offcanvas-title bi bi-person-fill" id="offcanvasWithBothOptionsLabel"> My Account</h5>
@@ -94,30 +101,48 @@
                 <div class="row">
                     <div class="col-12 border-bottom">
                         <ul class="list-unstyled fs-3 lh-lg">
-                            <li class="bi bi-box2"> Orders</li>
-                            <li class="bi bi-envelope"> Inbox</li>
-                            <li class="bi bi-chat-right-quote"> Pending Reviews</li>
-                            <li class="bi bi-heart"> Saved Items</li>
-                            <li class="bi bi-clock-history"> Recently Viewed</li>
+                            <a href="#">
+                                <li class="bi bi-box2"> Orders</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-envelope"> Inbox</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-chat-right-quote"> Pending Reviews</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-heart"> Saved Items</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-clock-history"> Recently Viewed</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="col-12 border-bottom">
                         <ul class="list-unstyled fs-3 lh-lg">
-                            <li>Account Management</li>
-                            <li>Address Book</li>
-                            <li>Newsletter Preferences</li>
-                            <li>Close Account</li>
+                            <a href="#">
+                                <li>Account Management</li>
+                            </a>
+                            <a href="#">
+                                <li>Address Book</li>
+                            </a>
+                            <a href="#">
+                                <li>Newsletter Preferences</li>
+                            </a>
+                            <a href="#">
+                                <li>Close Account</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn text-warning mt-3">LOGOUT</button>
+                        <button class="btn fw-bold mt-3">LOGOUT</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- For medium/large screen -->
-        <div class="row">
+        <div class="row display-large">
             <div class="col-2 ms-5 d-none d-md-block px-3 bg-light">
                 <nav class="border-bottom text-center p-2 mb-3">
                     <h4>My Account</h4>
@@ -125,30 +150,89 @@
                 <div class="row">
                     <div class="col-12 border-bottom">
                         <ul class="list-unstyled lh-lg">
-                            <li class="bi bi-box2"> Orders</li>
-                            <li class="bi bi-envelope"> Inbox</li>
-                            <li class="bi bi-chat-right-quote"> Pending Reviews</li>
-                            <li class="bi bi-heart"> Saved Items</li>
-                            <li class="bi bi-clock-history"> Recently Viewed</li>
+                            <a href="#">
+                                <li class="bi bi-box2"> Orders</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-envelope"> Inbox</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-chat-right-quote"> Pending Reviews</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-heart"> Saved Items</li>
+                            </a>
+                            <a href="#">
+                                <li class="bi bi-clock-history"> Recently Viewed</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="col-12 border-bottom">
                         <ul class="list-unstyled lh-lg">
-                            <li>Account Management</li>
-                            <li>Address Book</li>
-                            <li>Newsletter Preferences</li>
-                            <li>Close Account</li>
+                            <a href="#">
+                                <li>Account Management</li>
+                            </a>
+                            <a href="#">
+                                <li>Address Book</li>
+                            </a>
+                            <a href="#">
+                                <li>Newsletter Preferences</li>
+                            </a>
+                            <a href="#">
+                                <li>Close Account</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="col-12 text-center">
-                        <button class="btn text-warning mt-3">LOGOUT</button>
+                        <button class="btn fw-bold w-100 mt-3" id="logoutBtn">LOGOUT</button>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-9 ms-0 ms-md-4 bg-light">
-                <nav class="border-bottom text-center p-2 mb-3">
-                    <h4 class="text-center">Account Overview</h4>
+                <nav class="border-bottom p-2 mb-3">
+                    <!-- Media screen sidebar trigger button -->
+                    <button class="btn fw-bold mb-3 py-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list fs-1"></i></button>
+                    <h4 class="ms-5 d-inline-block">Account Overview</h4>
                 </nav>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="account-box border">
+                            <nav class="border-bottom p-4 fw-bold text-muted">ACCOUNT DETAILS</nav>
+                            <div class="p-4">
+                                <p id="accountName"></p>
+                                <p class="text-muted" id="accountEmail"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="account-box border">
+                            <nav class="border-bottom p-4 fw-bold text-muted">ADDRESS BOOK</nav>
+                            <div class="p-4">
+                                <p>Your default shipping address is:</p>
+                                <p class="text-muted">No default shipping address available</p>
+                                <button class="btn">ADD DEFAULT ADDRESS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="account-box border">
+                            <nav class="border-bottom p-4 fw-bold text-muted">STORE CREDIT</nav>
+                            <div class="p-4">
+                                <h4 class="bi bi-credit-card-2-back account-credit"> ₦ 0.00</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="account-box border">
+                            <nav class="border-bottom p-4 fw-bold text-muted">NEWSLETTER PREFERENCES</nav>
+                            <div class="p-4">
+                                <p>You are currently subscribed to following newsletters:</p>
+                                <i class="bi bi-check2 fs-3 text-muted"></i>
+                                <p class="d-inline text-muted">daily newsletters</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -199,7 +283,7 @@
     <!-- --------- Script Files --------- -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-        import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
         import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
 
         const firebaseConfig = {
@@ -217,10 +301,15 @@
         const auth = getAuth();
         const db = getDatabase();
         let allUsers = []
+        let loginForm = document.querySelector('.login-form')
+        let accountInfo = document.querySelector('.account-info')
+        let accountUsername = document.getElementById('accountName')
+        let accountUserEmail = document.getElementById('accountEmail')
 
         document.getElementById('signInBtn').addEventListener('click', ()=> {
-            if (userEmail.value != '' && userPassword.value != '') {
+            if (userEmail.value != '' && username.value != '' && userPassword.value != '') {
                 let userLogin = {
+                    Username : username.value,
                     Email : userEmail.value,
                     Password : userPassword.value
                 }
@@ -236,7 +325,11 @@
                     icon: "success",
                     button: "OK",
                 });
-                window.location.href = 'cart.html'
+                username.value = ''
+                userEmail.value = ''
+                userPassword.value = ''
+                loginForm.classList.add('d-none') 
+                accountInfo.classList.remove('d-none')  
             }
 
         })
@@ -247,12 +340,75 @@
                 .then((result) => {
                     const user = result.user
                     console.log(user)
-                    window.location.href = 'cart.html'
                 })
                 .catch((error) => {
                 console.log(error)
             })
         })
+
+        // Verify user if signed in
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log(user)
+                loginForm.classList.add('d-none')
+                accountInfo.classList.remove('d-none')
+                accountUsername.innerText = user.displayName
+                accountUserEmail.innerText = user.email
+            } else {
+                if (localStorage.userDetails) {
+                    if (localStorage.userIndex) {
+                        let allUsers = JSON.parse(localStorage.getItem('userDetails'))
+                        let userId = localStorage.getItem('userIndex')
+                        console.log(allUsers[userId]);
+                        loginForm.classList.add('d-none')
+                        accountInfo.classList.remove('d-none')
+                        accountUsername.innerText = allUsers.Username
+                        accountUserEmail.innerText = allUsers.Email
+                    }
+                    else {
+                        console.log('User not signed in');
+                        loginForm.classList.remove('d-none')
+                        accountInfo.classList.add('d-none')
+                    }
+                } else {
+                    loginForm.classList.remove('d-none')
+                    accountInfo.classList.add('d-none')
+                }
+            }
+        });
+
+        // Signs user out
+        document.getElementById('logoutBtn').addEventListener('click', ()=> {
+            signOut(auth)
+            .then(()=> {
+                console.log('User signed out successfully');
+            })
+            .catch((err)=> {
+                console.log('User could not sign out', err);
+            })
+        })
+
+        // function signOut() {
+        //     // Clear user information from local storage
+        //     localStorage.removeItem('displayName');
+        //     localStorage.removeItem('email');
+        // }
+
+        // // Check sign-in status on page load
+        // window.addEventListener('DOMContentLoaded', (event) => {
+        //     const displayName = localStorage.getItem('displayName');
+        //     const email = localStorage.getItem('email');
+
+        //     if (displayName && email) {
+        //         // User is signed in based on local storage data
+        //         // Display content for signed-in user
+        //     } else {
+        //         // User is not signed in based on local storage data
+        //         // Display content for signed-out user
+        //     }
+        // });
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

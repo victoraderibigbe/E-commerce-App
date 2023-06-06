@@ -179,6 +179,45 @@ border-radius: 10px;
     color: #ffb643 !important;
 }
 
+/* User Account Info Page */
+.account-info .offcanvas .offcanvas-body a {
+    color: #000442;
+}
+.account-info .offcanvas .offcanvas-body ul a {
+    line-height: 4.5rem;
+}
+.account-info .offcanvas .offcanvas-body button {
+    background: #ffb643;
+    color: #000442;
+}
+.account-info .display-large nav h4 {
+    color: #000442;
+}
+.account-info .display-large ul a {
+    color: #000442;
+    line-height: 3.5rem;
+    transition: all 0.3s ease;
+}
+.account-info .display-large ul a:hover {
+    color: #ffb643;
+    line-height: 3.5rem;
+}
+.account-info .display-large button {
+    background: #ffb643;
+    color: #000442;
+    transition: all 0.3s ease;
+}
+.account-info .display-large button:hover {
+    background: #000442;
+    color: #ffb643;
+}
+.account-info .display-large .account-box {
+    height: 15rem;
+}
+.account-info .display-large .account-box .account-credit h4 {
+   color: #000442; 
+}
+
 /* Cart Checkout Page */
 .cart-box .title{
     color: #000442;

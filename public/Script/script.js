@@ -5,6 +5,7 @@ let quantity = document.querySelector('.item-unit')
 let product = document.getElementById('product').src
 let description = document.getElementById('description').innerText
 let price = Number(document.getElementById('price').innerText)
+let notification = document.querySelector('.badge')
 
 if(localStorage.localproduct) {
   let detail = JSON.parse(localStorage.getItem('localproduct'))
@@ -47,6 +48,7 @@ cartBtn.addEventListener('click', ()=> {
   cartBtn.style.display = 'none'
   updateCart.classList.remove('d-none')
   let unit = quantity.innerText++ 
+  notification.innerText++
   let userOrder = JSON.parse(localStorage.getItem('localproduct'))
   console.log(userOrder);
   userOrder.map((each)=> {
@@ -67,10 +69,12 @@ cartBtn.addEventListener('click', ()=> {
 addItem.addEventListener('click', ()=> {
   if(quantity.innerText < 3) {
     quantity.innerText++
+    notification.innerText++
     let newUnit = quantity.innerText
     console.log(newUnit); 
     let userProduct = Number(price * newUnit)
     console.log(userProduct);
+    detail = JSON.parse(localStorage.getItem('localproduct'))
     detail.map((each)=> {
       let newInfo = {
         customerProduct: each.Product,
@@ -90,22 +94,23 @@ addItem.addEventListener('click', ()=> {
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
     let goodUnit = quantity.innerText--
+    notification.innerText--
     console.log(goodUnit); 
     let userGoods = Number(price * goodUnit)
     console.log(userGoods);
-    getGoods.map((each)=> {
-      let goodsInfo = {
-        customerProduct: each.Product,
-        proDescription: each.Description,
-        productPrice: userGoods,
-        Unit: goodUnit
-      }
-      allProducts.splice(0, 1, goodsInfo)
-      localStorage.setItem('localproduct', JSON.stringify(allProducts))
-    })
-    // if(localStorage.localproduct) {
-    //   let getGoods = JSON.parse(localStorage.getItem('localproduct'))
-    // }
+    if(localStorage.localproduct) {
+      let getGoods = JSON.parse(localStorage.getItem('localproduct'))
+      getGoods.map((each)=> {
+        let goodsInfo = {
+          customerProduct: each.Product,
+          proDescription: each.Description,
+          productPrice: userGoods,
+          Unit: goodUnit
+        }
+        allProducts.splice(0, 1, goodsInfo)
+        localStorage.setItem('localproduct', JSON.stringify(allProducts))
+      })
+    }
   } if(quantity.innerText == 0) {
     cartBtn.style.display = 'block'
     updateCart.classList.add('d-none')
