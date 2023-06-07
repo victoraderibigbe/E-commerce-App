@@ -6,6 +6,7 @@ let product = document.getElementById('product').src
 let description = document.getElementById('description').innerText
 let price = Number(document.getElementById('price').innerText)
 let notification = document.querySelector('.badge')
+let allNotifications = []
 let notificationUnit = 0
 
 if(localStorage.localproduct) {
@@ -51,7 +52,8 @@ cartBtn.addEventListener('click', ()=> {
   let unit = quantity.innerText++ 
   notification.classList.remove('d-none')
   notificationUnit = notification.innerText++
-  localStorage.setItem('badge', notificationUnit)
+  allNotifications.push(notificationUnit)
+  localStorage.setItem('badge', allNotifications)
   let userOrder = JSON.parse(localStorage.getItem('localproduct'))
   console.log(userOrder);
   userOrder.map((each)=> {
@@ -70,13 +72,14 @@ cartBtn.addEventListener('click', ()=> {
 
 
 addItem.addEventListener('click', ()=> {
-  if(quantity.innerText <= 3) {
+  if(quantity.innerText <= 2) {
     quantity.innerText++
     localStorage.getItem('badge')
-    newNotificationUnit =  notification.innerText++
-    localStorage.setItem('badge', newNotificationUnit)
+    let addNotificationUnit =  notification.innerText++
+    allNotifications.splice(0, 1, addNotificationUnit)
+    localStorage.setItem('badge', allNotifications)
     let newUnit = quantity.innerText
-    console.log(newUnit); 
+    console.log(newUnit);   
     let userProduct = Number(price * newUnit)
     console.log(userProduct);
     detail = JSON.parse(localStorage.getItem('localproduct'))
@@ -100,8 +103,9 @@ removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
     let goodUnit = quantity.innerText--
     localStorage.getItem('badge')
-    // notificationUnit = notification.innerText--
-    // localStorage.setItem('badge', notificationUnit)
+    let removeNotificationUnit = notification.innerText--
+    allNotifications.splice(0, 1, removeNotificationUnit)
+    localStorage.setItem('badge', allNotifications)
     console.log(goodUnit); 
     let userGoods = Number(price * goodUnit)
     console.log(userGoods);
