@@ -6,6 +6,7 @@ let product = document.getElementById('product').src
 let description = document.getElementById('description').innerText
 let price = Number(document.getElementById('price').innerText)
 let notification = document.querySelector('.badge')
+let notificationUnit = 0
 
 if(localStorage.localproduct) {
   let detail = JSON.parse(localStorage.getItem('localproduct'))
@@ -49,7 +50,7 @@ cartBtn.addEventListener('click', ()=> {
   updateCart.classList.remove('d-none')
   let unit = quantity.innerText++ 
   notification.classList.remove('d-none')
-  let notificationUnit = notification.innerText++
+  notificationUnit = notification.innerText++
   localStorage.setItem('badge', notificationUnit)
   let userOrder = JSON.parse(localStorage.getItem('localproduct'))
   console.log(userOrder);
@@ -69,9 +70,9 @@ cartBtn.addEventListener('click', ()=> {
 
 
 addItem.addEventListener('click', ()=> {
-  if(quantity.innerText < 3) {
-    localStorage.getItem('badge')
+  if(quantity.innerText <= 3) {
     quantity.innerText++
+    localStorage.getItem('badge')
     notificationUnit =  notification.innerText++
     localStorage.setItem('badge', notificationUnit)
     let newUnit = quantity.innerText
