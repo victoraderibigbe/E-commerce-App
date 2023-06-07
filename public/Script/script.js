@@ -7,7 +7,7 @@ let description = document.getElementById('description').innerText
 let price = Number(document.getElementById('price').innerText)
 let notification = document.querySelector('.badge')
 let allNotifications = []
-let notificationUnit = 0
+let notificationUnit = ''
 
 if(localStorage.localproduct) {
   let detail = JSON.parse(localStorage.getItem('localproduct'))
@@ -74,8 +74,9 @@ cartBtn.addEventListener('click', ()=> {
 addItem.addEventListener('click', ()=> {
   if(quantity.innerText <= 2) {
     quantity.innerText++
-    localStorage.getItem('badge')
-    let addNotificationUnit =  notification.innerText++
+    let previousNotificationUnit = localStorage.getItem('badge')
+    let addNotificationUnit =  previousNotificationUnit
+    addNotificationUnit++
     allNotifications.splice(0, 1, addNotificationUnit)
     localStorage.setItem('badge', allNotifications)
     let newUnit = quantity.innerText
@@ -102,8 +103,9 @@ addItem.addEventListener('click', ()=> {
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
     let goodUnit = quantity.innerText--
-    localStorage.getItem('badge')
-    let removeNotificationUnit = notification.innerText--
+    previousUnit = localStorage.getItem('badge')
+    let removeNotificationUnit = previousUnit
+    removeNotificationUnit--
     allNotifications.splice(0, 1, removeNotificationUnit)
     localStorage.setItem('badge', allNotifications)
     console.log(goodUnit); 
