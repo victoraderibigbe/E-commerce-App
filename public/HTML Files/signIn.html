@@ -50,9 +50,7 @@
                     <li class="nav-item cart">
                         <a href="./cart.html" class="nav-link">
                             Cart<i class="bi bi-cart-check position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
-                                </span>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"></span>
                             </i>
                         </a>
                     </li>
@@ -281,6 +279,8 @@
     </footer>
 
     <!-- --------- Script Files --------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
         import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
@@ -407,11 +407,15 @@
         //         // Display content for signed-out user
         //     }
         // });
-
-
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        let notification = document.querySelector('.badge')
+        if (localStorage.badge) {
+            notification.classList.remove('d-none')    
+            let notificationUnit = localStorage.getItem('badge')
+            notification.innerText = notificationUnit
+        }
+    </script>
 </body>
 
 </html>

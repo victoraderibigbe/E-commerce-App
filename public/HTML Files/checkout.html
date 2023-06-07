@@ -50,9 +50,7 @@
                     <li class="nav-item cart">
                         <a href="./cart.html" class="nav-link">
                             Cart<i class="bi bi-cart-check position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
-                                </span>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"></span>
                             </i>
                         </a>
                     </li>
@@ -269,6 +267,13 @@
 
     <!-- --------- Script Files --------- -->
     <script>
+        let notification = document.querySelector('.badge')
+        if (localStorage.badge) {
+            notification.classList.remove('d-none')    
+            let notificationUnit = localStorage.getItem('badge')
+            notification.innerText = notificationUnit
+        }
+
         let summary = document.querySelector('.summary-nav')
         let order = document.querySelector('.order-summary')
         if(localStorage.localproduct) {

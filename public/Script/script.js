@@ -48,7 +48,9 @@ cartBtn.addEventListener('click', ()=> {
   cartBtn.style.display = 'none'
   updateCart.classList.remove('d-none')
   let unit = quantity.innerText++ 
-  notification.innerText++
+  notification.classList.remove('d-none')
+  let notificationUnit = notification.innerText++
+  localStorage.setItem('badge', notificationUnit)
   let userOrder = JSON.parse(localStorage.getItem('localproduct'))
   console.log(userOrder);
   userOrder.map((each)=> {
@@ -68,8 +70,10 @@ cartBtn.addEventListener('click', ()=> {
 
 addItem.addEventListener('click', ()=> {
   if(quantity.innerText < 3) {
+    localStorage.getItem('badge')
     quantity.innerText++
-    notification.innerText++
+    notificationUnit =  notification.innerText++
+    localStorage.setItem('badge', notificationUnit)
     let newUnit = quantity.innerText
     console.log(newUnit); 
     let userProduct = Number(price * newUnit)
@@ -94,7 +98,9 @@ addItem.addEventListener('click', ()=> {
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
     let goodUnit = quantity.innerText--
-    notification.innerText--
+    localStorage.getItem('badge')
+    notificationUnit = notification.innerText--
+    localStorage.setItem('badge', notificationUnit)
     console.log(goodUnit); 
     let userGoods = Number(price * goodUnit)
     console.log(userGoods);

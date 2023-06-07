@@ -42,7 +42,7 @@
                     <li class="nav-item cart">
                         <a href="./cart.html" class="nav-link">
                             Cart<i class="bi bi-cart-check position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
                                     0
                                 </span>
                             </i>
@@ -87,14 +87,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
-                                                <h3>₦ 6,500</h3>
+                                            <div class="col-4 subtotal">
+                                                
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 p-2">
                                         <a href="#">
-                                            <button class="btn btn-warning w-100" id="checkout">CHECKOUT (₦ 6,500)</button>
+                                            <button class="btn btn-warning w-100 checkout-btn" id="checkout"></button>
                                         </a>
                                     </div>
                                 </div>
@@ -194,7 +194,16 @@
             })
         </script>
         <script>
+            let notification = document.querySelector('.badge')
+            if (localStorage.badge) {
+                notification.classList.remove('d-none')    
+                let notificationUnit = localStorage.getItem('badge')
+                notification.innerText = notificationUnit
+            }
+
             let savedInfo = JSON.parse(localStorage.getItem('localproduct'))
+            let subtotal = document.querySelector('.subtotal')
+            let checkoutBtn = document.querySelector('.checkout-btn')
             console.log(savedInfo);
             if(!savedInfo) {
                 document.getElementById('noOrder').classList.remove('d-none')
@@ -202,43 +211,43 @@
             } else {
                 document.getElementById('noOrder').classList.add('d-none')
                 document.getElementById('orderBox').classList.remove('d-none')
-            }
-            savedInfo.map((each)=> {
-                dispInfo.innerHTML = `
-                <div class="row px-4">
-                    <div class="col-12">
-                        <nav class="w-100 cart-nav p-2 border-bottom">
-                            <h3>Cart()</h3>
-                        </nav>
-                    </div>
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <img src="${each.customerProduct}" class="w-100" alt="">
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-warning w-100"><i class="bi bi-trash"> Remove</i></button>
+                savedInfo.map((each)=> {
+                    dispInfo.innerHTML = `
+                    <div class="row px-4">
+                        <div class="col-12">
+                            <nav class="w-100 cart-nav p-2 border-bottom">
+                                <h3>Cart()</h3>
+                            </nav>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <img src="${each.customerProduct}" class="w-100" alt="">
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-warning w-100"><i class="bi bi-trash"> Remove</i></button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-5 col-md-6">
-                                <p>${each.proDescription}</p>
-                            </div>
-                            <div class="col-4 col-md-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h3>₦${each.productPrice}</h3>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <button class="btn btn-warning"><i class="bi bi-dash"></i></button>
-                                            </div>
-                                            <div class="col-4 text-center"><h5>${each.Unit}</h5></div>
-                                            <div class="col-4">
-                                                <button class="btn btn-warning"><i class="bi bi-plus"></i></button>
+                                <div class="col-5 col-md-6">
+                                    <p>${each.proDescription}</p>
+                                </div>
+                                <div class="col-4 col-md-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3>₦${each.productPrice}</h3>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <button class="btn btn-warning"><i class="bi bi-dash"></i></button>
+                                                </div>
+                                                <div class="col-4 text-center"><h5>${each.Unit}</h5></div>
+                                                <div class="col-4">
+                                                    <button class="btn btn-warning"><i class="bi bi-plus"></i></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -246,9 +255,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                `
-            })
+                    `
+                    subtotal.innerHTML = `<h3>₦ ${each.productPrice}</h3>`
+                    checkoutBtn.innerText = `CHECKOUT (₦ ${each.productPrice})`
+                })
+            }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
