@@ -73,8 +73,8 @@ addItem.addEventListener('click', ()=> {
   if(quantity.innerText <= 3) {
     quantity.innerText++
     localStorage.getItem('badge')
-    notificationUnit =  notification.innerText++
-    localStorage.setItem('badge', notificationUnit)
+    newNotificationUnit =  notification.innerText++
+    localStorage.setItem('badge', newNotificationUnit)
     let newUnit = quantity.innerText
     console.log(newUnit); 
     let userProduct = Number(price * newUnit)
@@ -100,8 +100,8 @@ removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
     let goodUnit = quantity.innerText--
     localStorage.getItem('badge')
-    notificationUnit = notification.innerText--
-    localStorage.setItem('badge', notificationUnit)
+    // notificationUnit = notification.innerText--
+    // localStorage.setItem('badge', notificationUnit)
     console.log(goodUnit); 
     let userGoods = Number(price * goodUnit)
     console.log(userGoods);
