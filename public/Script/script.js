@@ -84,7 +84,10 @@ cartBtn.addEventListener('click', ()=> {
 
 // This function keeps adding the item to cart as long as it is being triggered
 addItem.addEventListener('click', ()=> {
-  
+  addToCart()
+})
+
+const addToCart = () => {
   // Notification badge unit increases and set to localStorage
   let previousNotificationUnit = JSON.parse(localStorage.getItem('badge'))
   let addNotificationUnit =  previousNotificationUnit
@@ -96,12 +99,12 @@ addItem.addEventListener('click', ()=> {
   // Item quantity increases
   quantity.innerText++
   let newUnit = quantity.innerText
-  console.log(newUnit); 
+  console.log(newUnit);
   
   // Computes total price
   let userProduct = Number(price * newUnit)
   console.log(userProduct);  
-
+  
   // Gets previous product information for localStorage and loops through the array
   detail = JSON.parse(localStorage.getItem('localproduct'))
   detail.map((each)=> {
@@ -114,10 +117,11 @@ addItem.addEventListener('click', ()=> {
     allProducts.splice(0, 1, newInfo)
     localStorage.setItem('localproduct', JSON.stringify(allProducts))
   })
-
+  
   // if(quantity.innerText <= 3) {
   // }
-})
+  
+}
 
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
