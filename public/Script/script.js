@@ -83,7 +83,7 @@ cartBtn.addEventListener('click', ()=> {
 
 // This function is triggered at the click of addItem button
 const addToCart = () => {
-
+  
   // Notification badge unit increases and set to localStorage
   let previousNotificationUnit = JSON.parse(localStorage.getItem('badge'))
   let addNotificationUnit =  previousNotificationUnit
@@ -102,19 +102,17 @@ const addToCart = () => {
   console.log(userProduct);  
   
   // Gets previous product information for localStorage and loops through the array
-  while (localStorage.localproduct) {
-    detail = JSON.parse(localStorage.getItem('localproduct'))
-    detail.map((each)=> {
-      let newInfo = {
-        customerProduct: each.Product,
-        proDescription: each.Description,
-        productPrice: userProduct,
-        Unit: newUnit
-      }
-      allProducts.splice(0, 1, newInfo)
-      localStorage.setItem('localproduct', JSON.stringify(allProducts))
-    })
-  }
+  detail = JSON.parse(localStorage.getItem('localproduct'))
+  detail.map((each)=> {
+    let newInfo = {
+      customerProduct: each.Product,
+      proDescription: each.Description,
+      productPrice: userProduct,
+      Unit: newUnit
+    }
+    allProducts.splice(0, 1, newInfo)
+    localStorage.setItem('localproduct', JSON.stringify(allProducts))
+  })
   
   // if(quantity.innerText <= 3) {
   // }
