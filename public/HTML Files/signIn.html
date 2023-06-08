@@ -387,33 +387,18 @@
                 console.log('User could not sign out', err);
             })
         })
-
-        // function signOut() {
-        //     // Clear user information from local storage
-        //     localStorage.removeItem('displayName');
-        //     localStorage.removeItem('email');
-        // }
-
-        // // Check sign-in status on page load
-        // window.addEventListener('DOMContentLoaded', (event) => {
-        //     const displayName = localStorage.getItem('displayName');
-        //     const email = localStorage.getItem('email');
-
-        //     if (displayName && email) {
-        //         // User is signed in based on local storage data
-        //         // Display content for signed-in user
-        //     } else {
-        //         // User is not signed in based on local storage data
-        //         // Display content for signed-out user
-        //     }
-        // });
     </script>
+
     <script>
         let notification = document.querySelector('.badge')
+        let badgeUnit = ''
+        
         if (localStorage.badge) {
-            notification.classList.remove('d-none')    
-            let notificationUnit = localStorage.getItem('badge')
-            notification.innerText = notificationUnit
+            notification.classList.remove('d-none')
+            badgeUnit = JSON.parse(localStorage.getItem('badge'))
+            notification.innerText = badgeUnit
+        } else {
+            notification.classList.add('d-none')
         }
     </script>
 </body>

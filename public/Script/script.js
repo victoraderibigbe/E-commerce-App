@@ -62,7 +62,8 @@ cartBtn.addEventListener('click', ()=> {
   updateCart.classList.remove('d-none')
   let unit = quantity.innerText++ 
   notification.classList.remove('d-none')
-  notificationUnit = notification.innerText++
+  notification.innerText = 1
+  notificationUnit = notification.innerText
   allNotifications.push(notificationUnit)
   localStorage.setItem('badge', JSON.stringify(allNotifications))
   let userOrder = JSON.parse(localStorage.getItem('localproduct'))

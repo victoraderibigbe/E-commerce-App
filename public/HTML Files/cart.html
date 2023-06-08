@@ -195,10 +195,14 @@
         </script>
         <script>
             let notification = document.querySelector('.badge')
+            let badgeUnit = ''
+            
             if (localStorage.badge) {
-                notification.classList.remove('d-none')    
-                let notificationUnit = localStorage.getItem('badge')
-                notification.innerText = notificationUnit
+                notification.classList.remove('d-none')
+                badgeUnit = JSON.parse(localStorage.getItem('badge'))
+                notification.innerText = badgeUnit
+            } else {
+                notification.classList.add('d-none')
             }
 
             let savedInfo = JSON.parse(localStorage.getItem('localproduct'))
