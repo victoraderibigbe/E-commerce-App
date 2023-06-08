@@ -84,13 +84,14 @@ cartBtn.addEventListener('click', ()=> {
 
 
 addItem.addEventListener('click', ()=> {
-  if(quantity.innerText <= 2) {
+  if(!quantity.innerText > 3) {
     quantity.innerText++
     let previousNotificationUnit = JSON.parse(localStorage.getItem('badge'))
     let addNotificationUnit =  previousNotificationUnit
     addNotificationUnit++
     allNotifications.splice(0, 1, addNotificationUnit)
     localStorage.setItem('badge', JSON.stringify(allNotifications))
+    notification.innerText = addNotificationUnit
     let newUnit = quantity.innerText
     console.log(newUnit);   
     let userProduct = Number(price * newUnit)
@@ -106,20 +107,18 @@ addItem.addEventListener('click', ()=> {
       allProducts.splice(0, 1, newInfo)
       localStorage.setItem('localproduct', JSON.stringify(allProducts))
     })
-    // if(localStorage.localproduct) {
-    //   let goods = JSON.parse(localStorage.getItem('localproduct'))
-    // }
   }
 })
 
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
     let goodUnit = quantity.innerText--
-    previousUnit = JSON.parse(localStorage.getItem('badge'))
+    let previousUnit = JSON.parse(localStorage.getItem('badge'))
     let removeNotificationUnit = previousUnit
     removeNotificationUnit--
     allNotifications.splice(0, 1, removeNotificationUnit)
     localStorage.setItem('badge', JSON.stringify(allNotifications))
+    notification.innerText = removeNotificationUnit
     console.log(goodUnit); 
     let userGoods = Number(price * goodUnit)
     console.log(userGoods);
