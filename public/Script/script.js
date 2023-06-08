@@ -25,8 +25,11 @@ if(localStorage.localproduct) {
 }
 
 if (localStorage.badge) {
+  notification.classList.remove('d-none')
   badgeUnit = JSON.parse(localStorage.getItem('badge'))
   notification.innerText = badgeUnit
+} else {
+  notification.classList.add('d-none')
 }
 
 let allProducts = []
