@@ -8,9 +8,11 @@ let price = Number(document.getElementById('price').innerText)
 let notification = document.querySelector('.badge')
 let allNotifications = []
 let notificationUnit = ''
+let detail = ''
+let badgeUnit = ''
 
 if(localStorage.localproduct) {
-  let detail = JSON.parse(localStorage.getItem('localproduct'))
+  detail = JSON.parse(localStorage.getItem('localproduct'))
   detail.forEach((each)=> {
     console.log(each.Unit);
     quantity.innerText = each.Unit
@@ -20,6 +22,11 @@ if(localStorage.localproduct) {
 } else {
   cartBtn.style.display = 'block'
   updateCart.classList.add('d-none')
+}
+
+if (localStorage.badge) {
+  badgeUnit = JSON.parse(localStorage.getItem('badge'))
+  notification.innerText = badgeUnit
 }
 
 let allProducts = []
