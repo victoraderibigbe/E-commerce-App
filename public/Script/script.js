@@ -1,11 +1,12 @@
-let cartBtn = document.getElementById('add-to-cart-btn');
-let cartBtnContainer = document.querySelector('.btn-container')
-let updateCart = document.querySelector('.update-cart')
-let quantity = document.querySelector('.item-unit')
-let product = document.getElementById('product').src
-let description = document.getElementById('description').innerText
-let price = Number(document.getElementById('price').innerText)
-let notification = document.querySelector('.badge')
+// Variable Declarations
+const cartBtn = document.getElementById('add-to-cart-btn');
+const cartBtnContainer = document.querySelector('.btn-container')
+const updateCart = document.querySelector('.update-cart')
+const quantity = document.querySelector('.item-unit')
+const product = document.getElementById('product').src
+const description = document.getElementById('description').innerText
+const price = Number(document.getElementById('price').innerText)
+const notification = document.querySelector('.badge')
 let allNotifications = []
 let notificationUnit = ''
 let detail = ''
@@ -102,19 +103,21 @@ const addToCart = () => {
   console.log(userProduct);  
   
   // Gets previous product information for localStorage and loops through the array
-  detail = JSON.parse(localStorage.getItem('localproduct'))
-  detail.map((each)=> {
-    let productPic = each.Product
-    let description = each.Description
-    let newInfo = {
-      customerProduct: productPic,
-      proDescription: description,
-      productPrice: userProduct,
-      Unit: newUnit
-    }
-    allProducts.splice(0, 1, newInfo)
-    localStorage.setItem('localproduct', JSON.stringify(allProducts))
-  })
+  while (localStorage.localproduct) {
+    detail = JSON.parse(localStorage.getItem('localproduct'))
+    detail.map((each)=> {
+      let productPic = each.Product
+      let productDescription = each.Description
+      let newInfo = {
+        customerProduct: productPic,
+        proDescription: productDescription,
+        productPrice: userProduct,
+        Unit: newUnit
+      }
+      allProducts.splice(0, 1, newInfo)
+      localStorage.setItem('localproduct', JSON.stringify(allProducts))
+    })
+  }
   
   // if(quantity.innerText <= 3) {
   // }
