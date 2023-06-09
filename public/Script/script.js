@@ -104,9 +104,11 @@ const addToCart = () => {
   // Gets previous product information for localStorage and loops through the array
   detail = JSON.parse(localStorage.getItem('localproduct'))
   detail.map((each)=> {
+    let productPic = each.Product
+    let description = each.Description
     let newInfo = {
-      customerProduct: each.Product,
-      proDescription: each.Description,
+      customerProduct: productPic,
+      proDescription: description,
       productPrice: userProduct,
       Unit: newUnit
     }
