@@ -102,7 +102,7 @@ const addToCart = () => {
   let userProduct = Number(price * newUnit)
   console.log(userProduct);  
   
-  // Gets previous product information for localStorage and loops through the array
+  // Gets previous product information from localStorage, loops through the array and replaces the new unit and new price
   detail = JSON.parse(localStorage.getItem('localproduct'))
   detail.map((each)=> {
     let productPic = each.Product
@@ -125,32 +125,49 @@ addItem.addEventListener('click', ()=> {
   }
 })
 
+// This function is triggered at the click of addItem button only if item is greater than zero
+const removeFromCart = () => {
+
+  // Notification badge unit decreases and the new unit is set to localStorage
+  let previousUnit = JSON.parse(localStorage.getItem('badge'))
+  let removeNotificationUnit = previousUnit
+  removeNotificationUnit--
+  allNotifications.splice(0, 1, removeNotificationUnit)
+  localStorage.setItem('badge', JSON.stringify(allNotifications))
+  notification.innerText = removeNotificationUnit
+
+  // Item quantity decreases
+  let goodUnit = quantity.innerText--
+  goodUnit = quantity.innerText
+  console.log(goodUnit); 
+
+  // Computes total price
+  let userGoods = Number(price * goodUnit)
+  console.log(userGoods);
+  
+  // Gets previous product information from localStorage, loops through the array and replaces the new unit and new price
+  let getGoods = JSON.parse(localStorage.getItem('localproduct'))
+  getGoods.map((each)=> {
+    let goodPic = each.Product
+    let goodDescription = each.Description
+    let goodsInfo = {
+      customerProduct: goodPic,
+      proDescription: goodDescription,
+      productPrice: userGoods,
+      Unit: goodUnit
+    }
+    allProducts.splice(0, 1, goodsInfo)
+    localStorage.setItem('localproduct', JSON.stringify(allProducts))
+    console.log('Successfully removed one item from cart');
+  })
+}
+
+// Triggers removeFromCart function is quantity is greater than zero
 removeItem.addEventListener('click', ()=> {
   if(quantity.innerText > 0) {
-    let goodUnit = quantity.innerText--
-    let previousUnit = JSON.parse(localStorage.getItem('badge'))
-    let removeNotificationUnit = previousUnit
-    removeNotificationUnit--
-    allNotifications.splice(0, 1, removeNotificationUnit)
-    localStorage.setItem('badge', JSON.stringify(allNotifications))
-    notification.innerText = removeNotificationUnit
-    console.log(goodUnit); 
-    let userGoods = Number(price * goodUnit)
-    console.log(userGoods);
-    if(localStorage.localproduct) {
-      let getGoods = JSON.parse(localStorage.getItem('localproduct'))
-      getGoods.map((each)=> {
-        let goodsInfo = {
-          customerProduct: each.Product,
-          proDescription: each.Description,
-          productPrice: userGoods,
-          Unit: goodUnit
-        }
-        allProducts.splice(0, 1, goodsInfo)
-        localStorage.setItem('localproduct', JSON.stringify(allProducts))
-      })
-    }
-  } if(quantity.innerText == 0) {
+    removeFromCart()
+  } 
+  if(quantity.innerText == 0) {
     cartBtn.style.display = 'block'
     updateCart.classList.add('d-none')
   }
