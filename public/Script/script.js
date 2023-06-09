@@ -103,25 +103,21 @@ const addToCart = () => {
   console.log(userProduct);  
   
   // Gets previous product information for localStorage and loops through the array
+  detail = JSON.parse(localStorage.getItem('localproduct'))
+  detail.map((each)=> {
+    let productPic = each.Product
+    let productDescription = each.Description
+    let newInfo = {
+      customerProduct: productPic,
+      proDescription: productDescription,
+      productPrice: userProduct,
+      Unit: newUnit
+    }
+    allProducts.splice(0, 1, newInfo)
+    localStorage.setItem('localproduct', JSON.stringify(allProducts))
+  })
   while (localStorage.localproduct) {
-    detail = JSON.parse(localStorage.getItem('localproduct'))
-    detail.map((each)=> {
-      let productPic = each.Product
-      let productDescription = each.Description
-      let newInfo = {
-        customerProduct: productPic,
-        proDescription: productDescription,
-        productPrice: userProduct,
-        Unit: newUnit
-      }
-      allProducts.splice(0, 1, newInfo)
-      localStorage.setItem('localproduct', JSON.stringify(allProducts))
-    })
   }
-  
-  // if(quantity.innerText <= 3) {
-  // }
-  
 }
 
 // Triggers addToCart function
