@@ -120,7 +120,7 @@ const addToCart = () => {
 
 // Triggers addToCart function
 addItem.addEventListener('click', ()=> {
-  if (quantity.innerText < 3) {
+  if (quantity.innerText <= 2) {
     addToCart()
   }
 })
