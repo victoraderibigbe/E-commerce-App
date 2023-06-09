@@ -84,7 +84,7 @@ cartBtn.addEventListener('click', ()=> {
 
 // This function is triggered at the click of addItem button
 const addToCart = () => {
-  
+
   // Notification badge unit increases and set to localStorage
   let previousNotificationUnit = JSON.parse(localStorage.getItem('badge'))
   let addNotificationUnit =  previousNotificationUnit
@@ -116,13 +116,13 @@ const addToCart = () => {
     allProducts.splice(0, 1, newInfo)
     localStorage.setItem('localproduct', JSON.stringify(allProducts))
   })
-  while (localStorage.localproduct) {
-  }
 }
 
 // Triggers addToCart function
 addItem.addEventListener('click', ()=> {
-  addToCart()
+  if (quantity.innerText < 2) {
+    addToCart()
+  }
 })
 
 removeItem.addEventListener('click', ()=> {
