@@ -168,7 +168,7 @@ removeItem.addEventListener('click', ()=> {
     cartBtn.style.display = 'block'
     updateCart.classList.add('d-none')
   }
-  else if(quantity.innerText > 0) {
+  else if(quantity.innerText > 0 && quantity.innerText != 0) {
     removeFromCart()
   } 
 })
