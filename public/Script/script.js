@@ -12,10 +12,10 @@ let notificationUnit = ''
 let detail = ''
 let badgeUnit = ''
 
+// Displays the information in the localStorage onload of the page
 if(localStorage.localproduct) {
   detail = JSON.parse(localStorage.getItem('localproduct'))
   detail.forEach((each)=> {
-    console.log(each.Unit);
     quantity.innerText = each.Unit
     cartBtn.style.display = 'none'
     updateCart.classList.remove('d-none')
@@ -25,6 +25,7 @@ if(localStorage.localproduct) {
   updateCart.classList.add('d-none')
 }
 
+// Displays the notification badge if available in the localStorage
 if (localStorage.badge) {
   notification.classList.remove('d-none')
   badgeUnit = JSON.parse(localStorage.getItem('badge'))
@@ -40,8 +41,11 @@ else {
   notification.classList.add('d-none')
 }
 
+// An empty array for all products and prices information
 let allProducts = []
 let allPrices = []
+
+// Object for each product information
 let productInfo = {
   Product: product,
   Description: description,
@@ -49,6 +53,7 @@ let productInfo = {
   Unit: ''
 }
 
+// This adds the first item to the array and sets the information to localStorage
 cartBtn.addEventListener('click', ()=> {
   if(localStorage.localproduct) {
     let customerPurchase = JSON.parse(localStorage.getItem('localproduct'))
@@ -66,16 +71,23 @@ cartBtn.addEventListener('click', ()=> {
     allProducts.push(productInfo)
     localStorage.setItem('localproduct', JSON.stringify(allProducts))
   }
+
+  // Updates the button display
   cartBtn.style.display = 'none'
   updateCart.classList.remove('d-none')
-  let unit = quantity.innerText++ 
+
+  // Sets the notification badge unit to 1 at first
   notification.classList.remove('d-none')
   notification.innerText = 1
   notificationUnit = notification.innerText
   allNotifications.push(notificationUnit)
   localStorage.setItem('badge', JSON.stringify(allNotifications))
+
+  // Increases the item quantity
+  let unit = quantity.innerText++ 
+
+  // Retrieves and updates previous information
   let userOrder = JSON.parse(localStorage.getItem('localproduct'))
-  console.log(userOrder);
   userOrder.map((each)=> {
     each.Unit = unit+1
     let updateInfo = {
