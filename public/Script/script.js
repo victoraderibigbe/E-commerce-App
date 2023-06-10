@@ -156,9 +156,11 @@ const removeFromCart = () => {
       productPrice: userGoods,
       Unit: goodUnit
     }
-    allProducts.splice(0, 1, goodsInfo)
-    localStorage.setItem('localproduct', JSON.stringify(allProducts))
-    console.log('Successfully removed one item from cart');
+    if (quantity.innerText > 0) {
+      allProducts.splice(0, 1, goodsInfo)
+      localStorage.setItem('localproduct', JSON.stringify(allProducts))
+      console.log('Successfully removed one item from cart');
+    }
   })
 }
 
