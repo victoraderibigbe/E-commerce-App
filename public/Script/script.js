@@ -115,9 +115,9 @@ const addToCart = () => {
     let productPic = each.Product
     let productDescription = each.Description
     let newInfo = {
-      customerProduct: productPic,
-      proDescription: productDescription,
-      productPrice: userProduct,
+      Product: productPic,
+      Description: productDescription,
+      Price: userProduct,
       Unit: newUnit
     }
     allProducts.splice(0, 1, newInfo)
@@ -163,9 +163,9 @@ const removeFromCart = () => {
 
     // Stores new information
     let goodsInfo = {
-      customerProduct: goodPic,
-      proDescription: goodDescription,
-      productPrice: userGoods,
+      Product: goodPic,
+      Description: goodDescription,
+      Price: userGoods,
       Unit: goodUnit
     }
     if (goodUnit < 1) {
