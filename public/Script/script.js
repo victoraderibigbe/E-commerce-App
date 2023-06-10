@@ -131,12 +131,13 @@ const removeFromCart = () => {
   // Notification badge unit decreases and the new unit is set to localStorage
   let previousUnit = JSON.parse(localStorage.getItem('badge'))
   let removeNotificationUnit = previousUnit
+  removeNotificationUnit--
+  allNotifications.splice(0, 1, removeNotificationUnit)
+  localStorage.setItem('badge', JSON.stringify(allNotifications))
+  notification.innerText = removeNotificationUnit
 
-  if (removeNotificationUnit > 1) {
-    removeNotificationUnit--
-    allNotifications.splice(0, 1, removeNotificationUnit)
-    localStorage.setItem('badge', JSON.stringify(allNotifications))
-    notification.innerText = removeNotificationUnit
+  if (removeNotificationUnit == 0) {
+    notification.classList.add('d-none')
   }
 
   // Item quantity decreases
