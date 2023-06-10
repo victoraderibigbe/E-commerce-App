@@ -228,7 +228,7 @@
                                 <div class="col-3">
                                     <div class="row">
                                         <div class="col-12">
-                                            <img src="${each.customerProduct}" class="w-100" alt="">
+                                            <img src="${each.Product}" class="w-100" alt="">
                                         </div>
                                         <div class="col-12">
                                             <button class="btn btn-warning w-100"><i class="bi bi-trash"> Remove</i></button>
@@ -236,12 +236,12 @@
                                     </div>
                                 </div>
                                 <div class="col-5 col-md-6">
-                                    <p>${each.proDescription}</p>
+                                    <p>${each.Description}</p>
                                 </div>
                                 <div class="col-4 col-md-3">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h3>₦${each.productPrice}</h3>
+                                            <h3>₦${each.Price}</h3>
                                         </div>
                                         <div class="col-12">
                                             <div class="row">
@@ -260,8 +260,8 @@
                         </div>
                     </div>
                     `
-                    subtotal.innerHTML = `<h3>₦ ${each.productPrice}</h3>`
-                    checkoutBtn.innerText = `CHECKOUT (₦ ${each.productPrice})`
+                    subtotal.innerHTML = `<h3>₦ ${each.Price}</h3>`
+                    checkoutBtn.innerText = `CHECKOUT (₦ ${each.Price})`
                 })
             }
         </script>
