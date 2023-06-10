@@ -30,7 +30,7 @@ if (localStorage.badge) {
   badgeUnit = JSON.parse(localStorage.getItem('badge'))
   notification.innerText = badgeUnit
 } 
-else if (!localStorage.badge || badgeUnit == 0) {
+else if (!localStorage.badge || badgeUnit < 1) {
   notification.classList.add('d-none')
 }
 
