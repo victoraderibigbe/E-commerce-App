@@ -166,7 +166,7 @@ const removeFromCart = () => {
 
 // Triggers removeFromCart function is quantity is greater than zero
 removeItem.addEventListener('click', ()=> {
-  if(quantity.innerText > 1) {
+  if(quantity.innerText > 0) {
     removeFromCart()
   } 
   else {
