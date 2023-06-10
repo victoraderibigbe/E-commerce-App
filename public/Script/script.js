@@ -141,20 +141,21 @@ const removeFromCart = () => {
     notification.classList.add('d-none')
   }
 
-  // Item quantity decreases
-  let goodUnit = quantity.innerText--
-  goodUnit = quantity.innerText
-  console.log(goodUnit); 
-
-  // Computes total price
-  let userGoods = Number(price * goodUnit)
-  console.log(userGoods);
-  
   // Gets previous product information from localStorage, loops through the array and replaces the new unit and new price
   let getGoods = JSON.parse(localStorage.getItem('localproduct'))
   getGoods.map((each)=> {
     let goodPic = each.Product
     let goodDescription = each.Description
+    let goodUnit = each.Unit
+    
+    // Item quantity decreases
+    goodUnit--
+    quantity.innerText--
+
+    // Computes total price
+    let userGoods = Number(price * goodUnit)
+
+    // Stores new information
     let goodsInfo = {
       customerProduct: goodPic,
       proDescription: goodDescription,
