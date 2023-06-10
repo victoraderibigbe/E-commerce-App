@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="../CSS Files/style.css">
-        <title>E-commerce</title>
-    </head>
-    <body>
-        <!-- -------- Navbar -------- -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary px-0 px-md-5 shadow sticky-top">
-            <div class="container-fluid">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../CSS Files/style.css" />
+    <title>iBuy</title>
+</head>
+
+<body>
+    <!-- -------- Navbar -------- -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-0 px-md-5 shadow sticky-top">
+        <div class="container-fluid">
             <a class="navbar-brand fs-1 fw-bold ms-0 ms-md-5 me-5" href="#">iBuy<i class="bi bi-cart4"></i></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse ms-5 fw-bold" id="navbarSupportedContent">
@@ -26,23 +31,31 @@
                         <a href="./HTML Files/signIn.html" class="nav-link">Sign In</a>
                     </li>
                     <li class="nav-item me-5 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Help
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Help Center</a></li>
                             <li><a class="dropdown-item" href="#">Place Order</a></li>
-                            <li><a class="dropdown-item" href="#">Order Cancellation</a></li>
-                            <li><a class="dropdown-item" href="#">Returns and Refunds</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Order Cancellation</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Returns and Refunds</a>
+                            </li>
                             <li><a class="dropdown-item" href="#">Payment</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                         </ul>
                     </li>
                     <li class="nav-item cart">
                         <a href="../HTML Files/cart.html" class="nav-link">
                             Cart<i class="bi bi-cart-check position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
                                     0
                                 </span>
                             </i>
@@ -50,534 +63,629 @@
                     </li>
                 </ul>
                 <form class="d-flex w-50 me-5 find" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn search-btn" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn search-btn" type="submit">Search</button>
                 </form>
             </div>
+        </div>
+    </nav>
+    <!-- -------- Navbar Ends -------- -->
+
+    <!-- -------- Hero Section -------- -->
+    <section class="hero-section p-3">
+        <div class="row">
+            <div class="d-none d-md-block col-2 categories">
+                <div class="row mt-3 ms-5 p-3 bg-light">
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-cart4"> Supermarket</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-brush"> Health & Beauty</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-house"> Home & Office</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-phone"> Phones & Tablets</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-pc-display-horizontal"> Computing</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-tv"> Electronics</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-universal-access"> Fashion</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-person-circle"> Baby Products</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-controller"> Game</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-bicycle"> Sporting Goods</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-bus-front"> Autombile</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-three-dots"> Other Categories</i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </nav>
+            <div class="col-12 col-md-8 mt-4">
 
-            <!-- -------- Hero Section -------- -->
-            <section class="hero-section p-3">
+                <!-- -------- Carousel -------- -->
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <section class="hero">
+                                <div class="row">
+                                    <div class="col-6 hero-div">
+                                        <div class="hero-pic">
+                                            <img src="../Images/Pic 1-removebg-preview.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 hero-text-div">
+                                        <div class="hero-text">
+                                            <h1 class="text-primary">
+                                                Shop like a pro, save like a champ - with iBuy
+                                                shopping app at your fingertips!
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <section class="hero">
+                                <div class="row">
+                                    <div class="col-6 hero-div">
+                                        <div class="hero-pic">
+                                            <img src="../Images/Pic_2-removebg-preview.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 hero-text-div">
+                                        <div class="hero-text">
+                                            <h1 class="text-primary">
+                                                Shop smarter, not harder! Discover the ultimate online
+                                                shopping experience with iBuy!
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <section class="hero">
+                                <div class="row">
+                                    <div class="col-6 hero-div">
+                                        <div class="hero-pic">
+                                            <img src="../Images/Pic_3-removebg-preview.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-6 hero-text-div">
+                                        <div class="hero-text">
+                                            <h1 class="text-primary">
+                                                Unleash the power of online shopping with iBuy, try it
+                                                now!
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- -------- carousel Ends -------- -->
+            </div>
+            <div class="d-none d-md-block col-2">
                 <div class="row">
-                    <div class="d-none d-md-block col-2 categories">
-                        <div class="row mt-3 ms-5 p-3 bg-light">
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-cart4"> Supermarket</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-brush"> Health & Beauty</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-house"> Home & Office</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-phone"> Phones & Tablets</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-pc-display-horizontal"> Computing</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-tv"> Electronics</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-universal-access"> Fashion</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-person-circle"> Baby Products</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-controller"> Game</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-bicycle"> Sporting Goods</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-bus-front"> Autombile</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-three-dots"> Other Categories</i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-4">
-                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active" data-bs-interval="3000">
-                                <section class="hero">
-                                    <div class="row">
-                                        <div class="col-6 hero-div">
-                                            <div class="hero-pic">
-                                                <img src="../Images/Pic 1-removebg-preview.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 hero-text-div">
-                                            <div class="hero-text">
-                                                <h1 class="text-primary">Shop like a pro, save like a champ - with iBuy shopping app at your fingertips!</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                              </div>
-                              <div class="carousel-item" data-bs-interval="3000">
-                                <section class="hero">
-                                    <div class="row">
-                                        <div class="col-6 hero-div">
-                                            <div class="hero-pic">
-                                                <img src="../Images/Pic_2-removebg-preview.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 hero-text-div">
-                                            <div class="hero-text">
-                                                <h1 class="text-primary">Shop smarter, not harder! Discover the ultimate online shopping experience with iBuy!</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                              </div>
-                              <div class="carousel-item" data-bs-interval="3000">
-                                <section class="hero">
-                                    <div class="row">
-                                        <div class="col-6 hero-div">
-                                            <div class="hero-pic">
-                                                <img src="../Images/Pic_3-removebg-preview.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 hero-text-div">
-                                            <div class="hero-text">
-                                                <h1 class="text-primary">Unleash the power of online shopping with iBuy, try it now!</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="d-none d-md-block col-2">
-                        <div class="row">
-                            <div class="col-12">
-                                <img src="https://media0.giphy.com/media/d8Emd2WnaJR2HoiHQy/200w.webp?cid=ecf05e47xn0zj8n2a1nas0jeei32be3ux43mu6m7u30gfxlb&rid=200w.webp&ct=g" class="w-100 m-auto rounded mb-2" alt="">
-                            </div>
-                            <div class="col-12">
-                                <img src="https://media3.giphy.com/media/veCY1SBYNKpPlOoxXp/200w.webp?cid=ecf05e47x2pbfk21wmedcq3phlq4gr0ft1qpdosq0bangllr&rid=200w.webp&ct=g" class="w-100 m-auto rounded" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- -------- Toggle Media Categories -->
-                <button class="btn d-md-none toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <i class="bi bi-list fs-2"></i>
-                </button>
-                  
-                <div class="offcanvas offcanvas-start w-75 fw-bold" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categories</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div class="row mt-3 p-3 bg-light">
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-cart4"> Supermarket</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-brush"> Health & Beauty</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-house"> Home & Office</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-phone"> Phones & Tablets</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-pc-display-horizontal"> Computing</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-tv"> Electronics</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-universal-access"> Fashion</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-person-circle"> Baby Products</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-controller"> Game</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-bicycle"> Sporting Goods</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-bus-front"> Autombile</i>
-                                </a>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <a href="#">
-                                    <i class="bi bi-three-dots"> Other Categories</i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- -------- Limited Stock Section -------- -->
-            <section class="stock-section mb-3">
-                <nav class="section-nav">
-                    <a href="#" class="text-decoration-none">
-                        <h2>Limited Stock Deals</h2>
-                    </a>
-                </nav>
-                <div class="container-fluid" style="width: 100%;">
-                    <div class="row flex-row flex-nowrap" style="white-space: nowrap; overflow-x: auto;">
-                        <div class="col-2 stock-box me-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/20/385178/1.jpg?1671" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">MOVEFAST 22.5W Super Fast Charging10000 MAH Power Banks</p>
-                                      <h3>₦ 6,500</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/49/795217/1.jpg?9070" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Oraimo 27000mAh Massive Powerbank OPB-P271D Traveller 3 Byte</p>
-                                      <h3>₦ 19,690</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/04/6428991/1.jpg?9138" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">XIAOMI A1 Plus, 6.52" 4G LTE, 2GB/32GB Memory, Fingerprint, Face ID Recognition...
-
-                                      </p>
-                                      <h3>₦ 54,000</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/5153201/1.jpg?5028" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">2021 Men's Casual Board Running Sneakers - White/Black</p>
-                                      <h3>₦ 8,100</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/31/449928/1.jpg?0609" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Schweppes Ginger Can 33cl x6</p>
-                                      <h3>₦ 1,550</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/26/1631921/1.jpg?1484" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Kuhl 32 Inch Full HD LED TV + 2 Years Warranty</p>
-                                      <h3>₦ 51,990</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/5941591/1.jpg?9427" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">itel 5W Charger With Free Cable - Black</p>
-                                      <h3>₦ 1,990</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">itel 20000mAh Dual Output & Dual Output Fast Charging Power Bank</p>
-                                      <h3>₦ 8,740</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/885728/1.jpg?8892" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Indomie Regular Chicken Flavour 70G X 40 (Indomie)</p>
-                                      <h3>₦ 4,000</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/20/887177/1.jpg?6173" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Smartwatch With Camera SIM Card TF/SD Card Slot-GT08</p>
-                                      <h3>₦ 6,930</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Official Store Section -->
-            <section class="stock-section mb-2">
-                <nav class="section-nav">
-                    <a href="#" class="text-decoration-none">
-                        <h2>Official Store Deals</h2>
-                    </a>
-                </nav>
-                <div class="container-fluid" style="width: 100%;">
-                    <div class="row flex-row flex-nowrap" style="white-space: nowrap; overflow-x: auto;">
-                        <div class=" col-2 stock-box me-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/49/311665/1.jpg?1273" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Skyrun 118 Litres Double Door Top Mount Fridge BCD-118HC Sliver</p>
-                                      <h3>₦ 148,990</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/46/460869/1.jpg?6600" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Jameson Irish Whiskey 70cl (Jameson)</p>
-                                      <h3>₦ 9,981</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/017007/1.jpg?8558" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Quinix Water Purifier / Filter Replacement Kit</p>
-                                      <h3>₦ 10,898</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/29/3531721/1.jpg?0747" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Oraimo Power-Bank OPB-P208DN 20KmAh</p>
-                                      <h3>₦ 12,700</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/83/975236/1.jpg?9904" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Qasa RECHARGEABLE LANTERN WITH SOLAR PANEL</p>
-                                      <h3>₦ 3,990</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/9523401/1.jpg?0863" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">NIVEA Pearl & Beauty Anti-Perspirant Roll-on For Women, 48h - 50ml (Pack Of 3)</p>
-                                      <h3>₦ 2,230</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">itel 20000mAh Dual Output & Dual Output Fast Charging Power Bank</p>
-                                      <h3>₦ 8,740</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/09/337998/1.jpg?0303" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Oraimo Multi-functional Smart Trimmer With 4 Guided Combs</p>
-                                      <h3>₦ 10,610</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/566938/1.jpg?4316" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Edifier X2 TWS Earbuds Wireless Earphones Bluetooth 5.1 Voice Assistant...</p>
-                                      <h3>₦ 10,730</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class=" col-2 stock-box mx-4">
-                            <a href="/HTML Files/fast.html">
-                                <div class="card shadow" style="width: 18rem;">
-                                    <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/465887/1.jpg?0844" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text text-wrap">Oraimo Charger UKDualUSB OCW-U63D White</p>
-                                      <h3>₦ 4,040</h3>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-             <!-- -------- Footer -------- -->
-             <footer class="footer">
-                <div class="row">
-                    <div class="col-12 footer-info">
-                        <div class="row">
-                            <div class="d-none d-md-block col-12 col-md-4 text-center p-5">
-                                <h1>iBuy</h1><i class="bi bi-cart4"></i>
-                            </div>
-                            <div class="col-12 col-md-4 p-5 text-center">
-                                <p>Subscribe to our newsletter to get updates on our latest offers!</p>
-                                <input type="email" class="form-control" placeholder="Enter your Email...">
-                                <button class="btn w-50 mt-3">Subscribe</button>
-                            </div>
-                            <div class="col-12 col-md-4 pt-0 pt-md-5 p-5 text-center">
-                                <div class="footer-icons w-50 mx-auto">
-                                    <p>JOIN US ON</p>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <a href="https://twitter.com/Vickiejohnn20"><i class="bi bi-twitter"></i></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="https://www.linkedin.com/in/vee-jay"><i class="bi bi-linkedin"></i></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="https://web.facebook.com/victorjohn.aderibigbe.7/"><i class="bi bi-facebook"></i></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="https://wa.me/+2349032317059"><i class="bi bi-whatsapp"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-12">
+                        <img src="https://media0.giphy.com/media/d8Emd2WnaJR2HoiHQy/200w.webp?cid=ecf05e47xn0zj8n2a1nas0jeei32be3ux43mu6m7u30gfxlb&rid=200w.webp&ct=g"
+                            class="w-100 m-auto rounded mb-2" alt="" />
                     </div>
                     <div class="col-12">
-                        <div class="footer-copyright w-25 mx-auto mt-3 text-center">
-                            &copy; copyright @ 2023 by <span>Victor Aderibigbe</span>
+                        <img src="https://media3.giphy.com/media/veCY1SBYNKpPlOoxXp/200w.webp?cid=ecf05e47x2pbfk21wmedcq3phlq4gr0ft1qpdosq0bangllr&rid=200w.webp&ct=g"
+                            class="w-100 m-auto rounded" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------- Toggle Media Categories -->
+        <button class="btn d-md-none toggle-btn" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="offcanvas offcanvas-start w-75 fw-bold" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categories</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row mt-3 p-3 bg-light">
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-cart4"> Supermarket</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-brush"> Health & Beauty</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-house"> Home & Office</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-phone"> Phones & Tablets</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-pc-display-horizontal"> Computing</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-tv"> Electronics</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-universal-access"> Fashion</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-person-circle"> Baby Products</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-controller"> Game</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-bicycle"> Sporting Goods</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-bus-front"> Autombile</i>
+                        </a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <a href="#">
+                            <i class="bi bi-three-dots"> Other Categories</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------- Toggle Media Category Ends -------- -->
+    </section>
+    <!-- -------- Hero Section Ends -------- -->
+
+    <!-- -------- Limited Stock Section -------- -->
+    <section class="stock-section mb-3">
+        <nav class="section-nav">
+            <a href="#" class="text-decoration-none">
+                <h2>Limited Stock Deals</h2>
+            </a>
+        </nav>
+        <div class="container-fluid" style="width: 100%">
+            <div class="row flex-row flex-nowrap" style="white-space: nowrap; overflow-x: auto">
+                <div class="col-2 stock-box me-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/20/385178/1.jpg?1671"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    MOVEFAST 22.5W Super Fast Charging10000 MAH Power Banks
+                                </p>
+                                <h3>₦ 6,500</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/49/795217/1.jpg?9070"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Oraimo 27000mAh Massive Powerbank OPB-P271D Traveller 3 Byte
+                                </p>
+                                <h3>₦ 19,690</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/04/6428991/1.jpg?9138"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    XIAOMI A1 Plus, 6.52" 4G LTE, 2GB/32GB Memory, Fingerprint,
+                                    Face ID Recognition...
+                                </p>
+                                <h3>₦ 54,000</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/5153201/1.jpg?5028"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    2021 Men's Casual Board Running Sneakers - White/Black
+                                </p>
+                                <h3>₦ 8,100</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/31/449928/1.jpg?0609"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Schweppes Ginger Can 33cl x6
+                                </p>
+                                <h3>₦ 1,550</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/26/1631921/1.jpg?1484"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Kuhl 32 Inch Full HD LED TV + 2 Years Warranty
+                                </p>
+                                <h3>₦ 51,990</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/5941591/1.jpg?9427"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    itel 5W Charger With Free Cable - Black
+                                </p>
+                                <h3>₦ 1,990</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    itel 20000mAh Dual Output & Dual Output Fast Charging Power
+                                    Bank
+                                </p>
+                                <h3>₦ 8,740</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/885728/1.jpg?8892"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Indomie Regular Chicken Flavour 70G X 40 (Indomie)
+                                </p>
+                                <h3>₦ 4,000</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/20/887177/1.jpg?6173"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Smartwatch With Camera SIM Card TF/SD Card Slot-GT08
+                                </p>
+                                <h3>₦ 6,930</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------- Limited Stock Section Ends -------- -->
+
+    <!-- Official Store Section -->
+    <section class="stock-section mb-2">
+        <nav class="section-nav">
+            <a href="#" class="text-decoration-none">
+                <h2>Official Store Deals</h2>
+            </a>
+        </nav>
+        <div class="container-fluid" style="width: 100%">
+            <div class="row flex-row flex-nowrap" style="white-space: nowrap; overflow-x: auto">
+                <div class="col-2 stock-box me-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/49/311665/1.jpg?1273"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Skyrun 118 Litres Double Door Top Mount Fridge BCD-118HC
+                                    Sliver
+                                </p>
+                                <h3>₦ 148,990</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/46/460869/1.jpg?6600"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Jameson Irish Whiskey 70cl (Jameson)
+                                </p>
+                                <h3>₦ 9,981</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/017007/1.jpg?8558"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Quinix Water Purifier / Filter Replacement Kit
+                                </p>
+                                <h3>₦ 10,898</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/29/3531721/1.jpg?0747"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Oraimo Power-Bank OPB-P208DN 20KmAh
+                                </p>
+                                <h3>₦ 12,700</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/83/975236/1.jpg?9904"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Qasa RECHARGEABLE LANTERN WITH SOLAR PANEL
+                                </p>
+                                <h3>₦ 3,990</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/9523401/1.jpg?0863"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    NIVEA Pearl & Beauty Anti-Perspirant Roll-on For Women, 48h
+                                    - 50ml (Pack Of 3)
+                                </p>
+                                <h3>₦ 2,230</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/74/523389/1.jpg?7424"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    itel 20000mAh Dual Output & Dual Output Fast Charging Power
+                                    Bank
+                                </p>
+                                <h3>₦ 8,740</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/09/337998/1.jpg?0303"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Oraimo Multi-functional Smart Trimmer With 4 Guided Combs
+                                </p>
+                                <h3>₦ 10,610</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/566938/1.jpg?4316"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Edifier X2 TWS Earbuds Wireless Earphones Bluetooth 5.1
+                                    Voice Assistant...
+                                </p>
+                                <h3>₦ 10,730</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 stock-box mx-4">
+                    <a href="/HTML Files/fast.html">
+                        <div class="card shadow" style="width: 18rem">
+                            <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/465887/1.jpg?0844"
+                                class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <p class="card-text text-wrap">
+                                    Oraimo Charger UKDualUSB OCW-U63D White
+                                </p>
+                                <h3>₦ 4,040</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------- Official Store Section Ends -------- -->
+
+    <!-- -------- Footer -------- -->
+    <footer class="footer">
+        <div class="row">
+            <div class="col-12 footer-info">
+                <div class="row">
+                    <div class="d-none d-md-block col-12 col-md-4 text-center p-5">
+                        <h1>iBuy</h1>
+                        <i class="bi bi-cart4"></i>
+                    </div>
+                    <div class="col-12 col-md-4 p-5 text-center">
+                        <p>
+                            Subscribe to our newsletter to get updates on our latest offers!
+                        </p>
+                        <input type="email" class="form-control" placeholder="Enter your Email..." />
+                        <button class="btn w-50 mt-3">Subscribe</button>
+                    </div>
+                    <div class="col-12 col-md-4 pt-0 pt-md-5 p-5 text-center">
+                        <div class="footer-icons w-50 mx-auto">
+                            <p>JOIN US ON</p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="https://twitter.com/Vickiejohnn20"><i class="bi bi-twitter"></i></a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="https://www.linkedin.com/in/vee-jay"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="https://web.facebook.com/victorjohn.aderibigbe.7/"><i
+                                            class="bi bi-facebook"></i></a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="https://wa.me/+2349032317059"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+            <div class="col-12">
+                <div class="footer-copyright w-25 mx-auto mt-3 text-center">
+                    &copy; copyright @ 2023 by <span>Victor Aderibigbe</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- -------- Footer Ends -------- -->
 
-        <!-- --------- Script Files --------- -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <script>
-            let notification = document.querySelector('.badge')
-            let badgeUnit = ''
-            
-            if (localStorage.badge) {
-                notification.classList.remove('d-none')
-                badgeUnit = JSON.parse(localStorage.getItem('badge'))
-                notification.innerText = badgeUnit
-            } else {
-                notification.classList.add('d-none')
-            }
-        </script>
-    </body>
+    <!-- --------- Script Files --------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        let notification = document.querySelector(".badge");
+        let badgeUnit = "";
+
+        if (localStorage.badge) {
+            notification.classList.remove("d-none");
+            badgeUnit = JSON.parse(localStorage.getItem("badge"));
+            notification.innerText = badgeUnit;
+        } else {
+            notification.classList.add("d-none");
+        }
+    </script>
+</body>
+
 </html>

@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="../CSS Files/style.css">
-        <title>E-commerce</title>
-    </head>
-    <body>
-        <!-- -------- Navbar -------- -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary px-0 px-md-5 shadow sticky-top">
-            <div class="container-fluid">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS Files/style.css">
+    <title>iBuy</title>
+</head>
+
+<body>
+    <!-- -------- Navbar -------- -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-0 px-md-5 shadow sticky-top">
+        <div class="container-fluid">
             <a class="navbar-brand fs-1 fw-bold ms-0 ms-md-5 me-5" href="#">iBuy<i class="bi bi-cart4"></i></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse ms-5 fw-bold" id="navbarSupportedContent">
@@ -26,7 +31,8 @@
                         <a href="./signIn.html" class="nav-link">Sign In</a>
                     </li>
                     <li class="nav-item me-5 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Help
                         </a>
                         <ul class="dropdown-menu">
@@ -35,14 +41,17 @@
                             <li><a class="dropdown-item" href="#">Order Cancellation</a></li>
                             <li><a class="dropdown-item" href="#">Returns and Refunds</a></li>
                             <li><a class="dropdown-item" href="#">Payment</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item" href="#">FAQ</a></li>
                         </ul>
                     </li>
                     <li class="nav-item cart">
                         <a href="./cart.html" class="nav-link">
                             Cart<i class="bi bi-cart-check position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
                                     0
                                 </span>
                             </i>
@@ -50,173 +59,178 @@
                     </li>
                 </ul>
                 <form class="d-flex w-50 me-5 find" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn search-btn" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn search-btn" type="submit">Search</button>
                 </form>
             </div>
-            </div>
-        </nav>
+        </div>
+    </nav>
 
-            <!-- --------- Cart and Orders --------- -->
-            <div id="noOrder" class="container w-50 mx-auto text-center shadow cart-box p-3 p-md-5 mt-5 mb-5 bg-light">
-                <h1 class="title">Carts & Orders</h1>
-                <h3>Ooops... You currently have nothing in cart!</h3>
-                <a href="../index.html">
-                    <button class="btn w-50 fw-bold mt-4">Start Shopping</button>
-                </a>
-            </div>
-            <div id="orderBox" class="container order-box mx-auto shadow p-3 p-md-5 mb-5 mt-5">
-                <div class="row">
-                    <div id="dispInfo" class="col-12 col-md-8 p-3 p-md-5 bg-light"></div>
-                    <div class="col-12 col-md-3 ms-4">
-                        <div class="row px-4">
-                            <div class="col-12 mb-2 bg-light">
-                                <div class="row">
-                                    <div class="col-12 p-2 border-bottom">
-                                        <h3>CART SUMMARY</h3>
-                                    </div>
-                                    <div class="col-12 p-2 border-bottom">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <h5>Subtotal</h5>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <p>Delivery not included yet</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-4 subtotal">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 p-2">
-                                        <a href="#">
-                                            <button class="btn btn-warning w-100 checkout-btn" id="checkout"></button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 bg-light">
-                                <h3>Returns are easy</h3>
-                                <p>Free return within 15 days for Official Store items and 7 days for other eligible items</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-             <!-- -------- Footer -------- -->
-             <footer class="footer">
-                <div class="row">
-                    <div class="col-12 footer-info">
+    <!-- --------- Cart and Orders --------- -->
+    <div id="noOrder" class="container w-50 mx-auto text-center shadow cart-box p-3 p-md-5 mt-5 mb-5 bg-light">
+        <h1 class="title">Carts & Orders</h1>
+        <h3>Ooops... You currently have nothing in cart!</h3>
+        <a href="../index.html">
+            <button class="btn w-50 fw-bold mt-4">Start Shopping</button>
+        </a>
+    </div>
+    <div id="orderBox" class="container order-box mx-auto shadow p-3 p-md-5 mb-5 mt-5">
+        <div class="row">
+            <div id="dispInfo" class="col-12 col-md-8 p-3 p-md-5 bg-light"></div>
+            <div class="col-12 col-md-3 ms-4">
+                <div class="row px-4">
+                    <div class="col-12 mb-2 bg-light">
                         <div class="row">
-                            <div class="d-none d-md-block col-12 col-md-4 text-center p-5">
-                                <h1>iBuy</h1><i class="bi bi-cart4"></i>
+                            <div class="col-12 p-2 border-bottom">
+                                <h3>CART SUMMARY</h3>
                             </div>
-                            <div class="col-12 col-md-4 p-5 text-center">
-                                <p>Subscribe to our newsletter to get updates on our latest offers!</p>
-                                <input type="email" class="form-control" placeholder="Enter your Email...">
-                                <button class="btn w-50 mt-3">Subscribe</button>
-                            </div>
-                            <div class="col-12 col-md-4 pt-0 pt-md-5 p-5 text-center">
-                                <div class="footer-icons w-50 mx-auto">
-                                    <p>JOIN US ON</p>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <a href="https://twitter.com/Vickiejohnn20"><i class="bi bi-twitter"></i></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="https://www.linkedin.com/in/vee-jay"><i class="bi bi-linkedin"></i></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="https://web.facebook.com/victorjohn.aderibigbe.7/"><i class="bi bi-facebook"></i></a>
-                                        </div>
-                                        <div class="col-3">
-                                            <a href="https://wa.me/+2349032317059"><i class="bi bi-whatsapp"></i></a>
+                            <div class="col-12 p-2 border-bottom">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Subtotal</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>Delivery not included yet</p>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-4 subtotal">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 p-2">
+                                <a href="#">
+                                    <button class="btn btn-warning w-100 checkout-btn" id="checkout"></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 bg-light">
+                        <h3>Returns are easy</h3>
+                        <p>Free return within 15 days for Official Store items and 7 days for other eligible items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------- Footer -------- -->
+    <footer class="footer">
+        <div class="row">
+            <div class="col-12 footer-info">
+                <div class="row">
+                    <div class="d-none d-md-block col-12 col-md-4 text-center p-5">
+                        <h1>iBuy</h1><i class="bi bi-cart4"></i>
+                    </div>
+                    <div class="col-12 col-md-4 p-5 text-center">
+                        <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+                        <input type="email" class="form-control" placeholder="Enter your Email...">
+                        <button class="btn w-50 mt-3">Subscribe</button>
+                    </div>
+                    <div class="col-12 col-md-4 pt-0 pt-md-5 p-5 text-center">
+                        <div class="footer-icons w-50 mx-auto">
+                            <p>JOIN US ON</p>
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="https://twitter.com/Vickiejohnn20"><i class="bi bi-twitter"></i></a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="https://www.linkedin.com/in/vee-jay"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="https://web.facebook.com/victorjohn.aderibigbe.7/"><i
+                                            class="bi bi-facebook"></i></a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="https://wa.me/+2349032317059"><i class="bi bi-whatsapp"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="footer-copyright w-25 mx-auto mt-3 text-center">
-                            &copy; copyright @ 2023 by <span>Victor Aderibigbe</span>
-                        </div>
-                    </div>
                 </div>
-            </footer>
+            </div>
+            <div class="col-12">
+                <div class="footer-copyright w-25 mx-auto mt-3 text-center">
+                    &copy; copyright @ 2023 by <span>Victor Aderibigbe</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- --------- Script Files --------- -->
-        <script type="module">
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-            import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+    <!-- --------- Script Files --------- -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 
-            const firebaseConfig = {
+        const firebaseConfig = {
             apiKey: "AIzaSyBpBXEavkwil9WsvLq8ilidjyHEOigBdDg",
             authDomain: "ibuy-ca7a5.firebaseapp.com",
             projectId: "ibuy-ca7a5",
             storageBucket: "ibuy-ca7a5.appspot.com",
             messagingSenderId: "551424000820",
             appId: "1:551424000820:web:ee3b977b08211baa921b61"
-            };
+        };
 
-            const app = initializeApp(firebaseConfig);
-            const auth = getAuth();
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
 
-            document.getElementById('checkout').addEventListener('click', ()=> {
-                onAuthStateChanged(auth, (user) => {
-                    if (user) {
-                        console.log(user)
-                        window.location.href = 'checkout.html'
-                    } else {
-                        if (localStorage.userDetails) {
-                            if (localStorage.userIndex) {
-                                let allUsers = JSON.parse(localStorage.getItem('userDetails'))
-                                let userId = localStorage.getItem('userIndex')
-                                console.log(allUsers[userId]);
-                                window.location.href = 'checkout.html'
-                            }
-                            else {
-                                console.log('User not signed in');
-                                window.location.href = 'signIn.html'
-                            }
-                        } else {
+        document.getElementById('checkout').addEventListener('click', () => {
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    console.log(user)
+                    window.location.href = 'checkout.html'
+                } else {
+                    if (localStorage.userDetails) {
+                        if (localStorage.userIndex) {
+                            let allUsers = JSON.parse(localStorage.getItem('userDetails'))
+                            let userId = localStorage.getItem('userIndex')
+                            console.log(allUsers[userId]);
+                            window.location.href = 'checkout.html'
+                        }
+                        else {
+                            console.log('User not signed in');
                             window.location.href = 'signIn.html'
                         }
+                    } else {
+                        window.location.href = 'signIn.html'
                     }
-                });
+                }
+            });
 
-                        
-            })
-        </script>
-        <script>
-            let notification = document.querySelector('.badge')
-            let badgeUnit = ''
-            
-            if (localStorage.badge) {
-                notification.classList.remove('d-none')
-                badgeUnit = JSON.parse(localStorage.getItem('badge'))
-                notification.innerText = badgeUnit
-            } else {
-                notification.classList.add('d-none')
-            }
 
-            let savedInfo = JSON.parse(localStorage.getItem('localproduct'))
-            let subtotal = document.querySelector('.subtotal')
-            let checkoutBtn = document.querySelector('.checkout-btn')
-            console.log(savedInfo);
-            if(!savedInfo) {
-                document.getElementById('noOrder').classList.remove('d-none')
-                document.getElementById('orderBox').classList.add('d-none')
-            } else {
-                document.getElementById('noOrder').classList.add('d-none')
-                document.getElementById('orderBox').classList.remove('d-none')
-                savedInfo.map((each)=> {
-                    dispInfo.innerHTML = `
+        })
+    </script>
+    <script>
+        // Get localStorage information
+        // Initialize notification badge unit to empty string
+        // Update and display badge unit with localStorage information
+
+        let notification = document.querySelector('.badge')
+        let badgeUnit = ''
+        if (localStorage.badge) {
+            notification.classList.remove('d-none')
+            badgeUnit = JSON.parse(localStorage.getItem('badge'))
+            notification.innerText = badgeUnit
+        } else {
+            notification.classList.add('d-none')
+        }
+
+        // Get product information from localStorage and display appropriately
+        let savedInfo = JSON.parse(localStorage.getItem('localproduct'))
+        let subtotal = document.querySelector('.subtotal')
+        let checkoutBtn = document.querySelector('.checkout-btn')
+        console.log(savedInfo);
+        if (!savedInfo) {
+            document.getElementById('noOrder').classList.remove('d-none')
+            document.getElementById('orderBox').classList.add('d-none')
+        } else {
+            document.getElementById('noOrder').classList.add('d-none')
+            document.getElementById('orderBox').classList.remove('d-none')
+            savedInfo.map((each) => {
+                dispInfo.innerHTML = `
                     <div class="row px-4">
                         <div class="col-12">
                             <nav class="w-100 cart-nav p-2 border-bottom">
@@ -260,11 +274,14 @@
                         </div>
                     </div>
                     `
-                    subtotal.innerHTML = `<h3>₦ ${each.Price}</h3>`
-                    checkoutBtn.innerText = `CHECKOUT (₦ ${each.Price})`
-                })
-            }
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </body>
+                subtotal.innerHTML = `<h3>₦ ${each.Price}</h3>`
+                checkoutBtn.innerText = `CHECKOUT (₦ ${each.Price})`
+            })
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

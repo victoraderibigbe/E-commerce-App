@@ -9,7 +9,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS Files/style.css">
-    <title>E-commerce</title>
+    <title>iBuy</title>
 </head>
 
 <body>
@@ -50,7 +50,8 @@
                     <li class="nav-item cart">
                         <a href="./cart.html" class="nav-link">
                             Cart<i class="bi bi-cart-check position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"></span>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"></span>
                             </i>
                         </a>
                     </li>
@@ -74,7 +75,9 @@
                     <div class="col-12 bg-light">
                         <div class="row">
                             <nav class="border-bottom p-3">
-                                <i class="bi bi-patch-check-fill"><h6 class="d-inline ms-3">1. DELIVERY ADDRESS</h6></i>
+                                <i class="bi bi-patch-check-fill">
+                                    <h6 class="d-inline ms-3">1. DELIVERY ADDRESS</h6>
+                                </i>
                             </nav>
                             <div class="row p-3">
                                 <div class="col-12">
@@ -85,21 +88,25 @@
                                                 <div class="col-6">
                                                     <div class="form-group my-3">
                                                         <label for="" class="form-label">First Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Your First Name">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Your First Name">
                                                     </div>
                                                     <div class="form-group my-3">
                                                         <label for="" class="form-label">Phone Number</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Your Phone Number">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Your Phone Number">
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group my-3">
                                                         <label for="" class="form-label">Last Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Your Last Name">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Your Last Name">
                                                     </div>
                                                     <div class="form-group my-3">
                                                         <label for="" class="form-label">Additional Phone Number</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Additional Phone Number">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Additional Phone Number">
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,7 +120,8 @@
                                     </div>
                                     <div class="form-group my-3">
                                         <label for="" class="form-label">Additional Information</label>
-                                        <input type="text" class="form-control" placeholder="Enter Additional Information">
+                                        <input type="text" class="form-control"
+                                            placeholder="Enter Additional Information">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -186,12 +194,16 @@
                     </div>
                     <div class="col-12 mt-3 bg-light">
                         <nav class="p-3">
-                                <i class="bi bi-patch-check-fill"><h6 class="d-inline ms-3">2. DELIVERY METHOD</h6></i>
+                            <i class="bi bi-patch-check-fill">
+                                <h6 class="d-inline ms-3">2. DELIVERY METHOD</h6>
+                            </i>
                         </nav>
                     </div>
                     <div class="col-12 mt-3 bg-light">
                         <nav class="p-3">
-                                <i class="bi bi-patch-check-fill"><h6 class="d-inline ms-3">3. PAYMENT METHOD</h6></i>
+                            <i class="bi bi-patch-check-fill">
+                                <h6 class="d-inline ms-3">3. PAYMENT METHOD</h6>
+                            </i>
                         </nav>
                     </div>
                 </div>
@@ -202,7 +214,7 @@
                 </nav>
                 <div class="row">
                     <div id="orderSummary" class="col-12 bg-light order-summary">
-                        
+
                     </div>
                     <div class="col-12 my-3 bg-light">
                         <nav class="border-bottom p-2">
@@ -269,7 +281,7 @@
     <script>
         let notification = document.querySelector('.badge')
         let badgeUnit = ''
-        
+
         if (localStorage.badge) {
             notification.classList.remove('d-none')
             badgeUnit = JSON.parse(localStorage.getItem('badge'))
@@ -280,10 +292,10 @@
 
         let summary = document.querySelector('.summary-nav')
         let order = document.querySelector('.order-summary')
-        if(localStorage.localproduct) {
+        if (localStorage.localproduct) {
             let retrievedProducts = JSON.parse(localStorage.getItem('localproduct'))
             console.log(retrievedProducts);
-            retrievedProducts.map((each)=> {
+            retrievedProducts.map((each) => {
                 order.innerHTML += `
                 <nav class="border-bottom p-2">
                     <h6>YOUR ORDER (${each.Unit} items)</h6>
@@ -310,7 +322,9 @@
             order.classList.add('d-none')
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
